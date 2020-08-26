@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/adapter/MyAListAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/adapter/MyAListAdapter2.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/adapter/MyBListAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/adapter/MyGridAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/adapter/MyPagerAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/fragement/FenLeiFragment.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/fragement/WoDeFragment.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/fs/widget/MyScollview.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/fs/widget/OnMyClickListener.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/fs/widget/TabMenuView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/myschool/LoginActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/myschool/MainActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/myschool/ShowActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/myschool/UpdateActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/net/ServerApi.java" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

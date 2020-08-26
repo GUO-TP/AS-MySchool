@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.myschool"
+        minSdkVersion 19
+        targetSdkVersion 29
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation 'com.google.code.gson:gson:2.2.4'
+//    implementation 'com.android.support:support-v4:19.1.0'
+    testImplementation 'junit:junit:4.12'
+    implementation files('libs\\volly-1.0.11.jar')
+    implementation files('libs\\android-support-v4.jar')
+    implementation files('libs\\gson-2.2.4.jar')
+    implementation files('libs\\xUtils-2.6.14.jar')
+    implementation files('libs\\RecyclerView.jar')
+
+
+}

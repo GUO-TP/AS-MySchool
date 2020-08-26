@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fs.widget.MyScollview
+    android:id="@+id/f1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+      android:scaleType="fitXY"
+    android:orientation="vertical" >
+       
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+         <!--    <android.support.v4.view.ViewPager
+                android:id="@+id/reconmendFragmentViewPager"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginTop="2dp"
+                android:background="#000000" />
+
+            <LinearLayout
+                android:id="@+id/diandian"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/reconmendFragmentDotViewLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dip"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </LinearLayout>
+-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="推荐"
+                android:textSize="18sp"
+                android:textColor="@color/beige"
+                android:gravity="center"
+                android:layout_gravity="center" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/find_nomal" />
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="秒杀" 
+                android:textSize="18sp"
+                android:textColor="@color/beige"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/find_selected" />
+                  
+
+                    
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="优惠" 
+                android:textSize="18sp"
+                android:textColor="@color/beige"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rb_home_bg" />
+
+                   
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="每日逛" 
+                 android:textSize="18sp"
+                android:textColor="@color/beige"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+           <!--   <com.fs.widget.MyGridView
+                android:id="@+id/shouye_gridView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnWidth="120dp"
+                android:focusable="true"
+                android:gravity="center"
+                android:horizontalSpacing="1dp"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="1dp" />
+                -->
+        </LinearLayout>
+        
+    </com.fs.widget.MyScollview>
+ 

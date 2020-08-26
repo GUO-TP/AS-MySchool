@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/goods_getinf"
+        android:title="二货信息接受"/>
+    <item 
+        android:id="@+id/goods_setinf"
+        android:title="二货出售与求购信息发布"/>
+
+ 
+
+</menu>

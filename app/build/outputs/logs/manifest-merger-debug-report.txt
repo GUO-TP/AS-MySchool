@@ -1,0 +1,79 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml:2:1-35:12
+	package
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:3:5-27
+		INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+		INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+		INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+		INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+application
+ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:8:5-32:19
+	android:label
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:11:9-41
+	android:icon
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:10:9-45
+	android:allowBackup
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:12:9-40
+activity#com.myschool.MainActivity
+ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:13:9-22:20
+	android:label
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:16:13-45
+	android:name
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:14:13-53
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:17:13-21:29
+action#android.intent.action.MAIN
+ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:20:17-77
+	android:name
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:20:27-74
+activity#com.myschool.UpdateActivity
+ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:24:12-27:20
+	android:label
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:25:13-55
+activity#com.myschool.ShowActivity
+ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:28:10-31:20
+	android:label
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:30:13-41
+	android:name
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:29:13-53
+uses-permission#android.permission.INTERNET
+ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:34:1-63
+	android:name
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml:34:18-60
+uses-sdk
+INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+		INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+		ADDED from E:\app\MySchool\app\src\main\AndroidManifest.xml
+		INJECTED from E:\app\MySchool\app\src\main\AndroidManifest.xml
