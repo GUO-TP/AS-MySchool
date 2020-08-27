@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal" >
+    android:baselineAligned="false"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:id="@+id/tab_view_btn_zhuye"
@@ -12,15 +13,10 @@
 
         <TextView
             android:id="@+id/tab_view_btn_zhuye_image"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:background="@drawable/home_selected"
-            android:layout_weight="1"
+            android:background="@drawable/home_selected" />
 
-
-            />
-
-       
     </LinearLayout>
 
     <LinearLayout
@@ -31,63 +27,58 @@
 
         <TextView
             android:id="@+id/tab_view_btn_fenlei_image"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:background="@drawable/type_nomal"
-            android:layout_weight="1"/>
+            android:background="@drawable/type_nomal" />
 
-        
+
     </LinearLayout>
 
-   <!--   <RelativeLayout
-        android:id="@+id/tab_view_btn_faxian"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:layout_weight="1" >
+    <!--   <RelativeLayout
+         android:id="@+id/tab_view_btn_faxian"
+         android:layout_width="match_parent"
+         android:layout_height="42dp"
+         android:layout_weight="1" >
 
-        <TextView
-            android:id="@+id/tab_view_btn_faxian_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_centerInParent="true"
-             android:background="@drawable/find_nomal" />
+         <TextView
+             android:id="@+id/tab_view_btn_faxian_image"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:layout_centerInParent="true"
+              android:background="@drawable/find_nomal" />
 
-        
-    </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/tab_view_btn_gouwuche"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:layout_weight="1" >
+     </RelativeLayout>
 
-        <TextView
-            android:id="@+id/tab_view_btn_gouwuche_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_centerInParent="true"
-             android:background="@drawable/car_nomal"/>
+     <RelativeLayout
+         android:id="@+id/tab_view_btn_gouwuche"
+         android:layout_width="match_parent"
+         android:layout_height="42dp"
+         android:layout_weight="1" >
 
-       
-    </RelativeLayout>-->
+         <TextView
+             android:id="@+id/tab_view_btn_gouwuche_image"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:layout_centerInParent="true"
+              android:background="@drawable/car_nomal"/>
+
+
+     </RelativeLayout>-->
 
     <LinearLayout
         android:id="@+id/tab_view_btn_wode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-         android:layout_weight="1">
+        android:layout_weight="1">
 
         <TextView
             android:id="@+id/tab_view_btn_wode_image"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:background="@drawable/mine_nomal"
-            android:layout_weight="1"
-            />
-
-       
+            android:background="@drawable/mine_nomal" />
     </LinearLayout>
 
 </LinearLayout>

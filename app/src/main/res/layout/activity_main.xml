@@ -2,31 +2,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    tools:context="com.myschool.MainActivity" >
+    tools:context="com.myschool.MainActivity">
 
-     <RelativeLayout
-            android:layout_width="match_parent"
-            android:scaleType="fitXY"
-            android:layout_height="match_parent">
-  
+
     <android.support.v4.view.ViewPager
         android:id="@+id/shop_main_body"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/homePageTabMenuView"
         android:layout_alignParentTop="true"
-        android:scaleType="fitXY"
-        android:background="@color/whitesmoke"/>
-      
+        android:background="@color/whitesmoke"
+        android:scaleType="fitXY" />
+
     <com.fs.widget.TabMenuView
         android:id="@+id/homePageTabMenuView"
         android:layout_width="match_parent"
-        android:scaleType="fitXY"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/shop_main_body"
+        android:layout_alignStart="@id/shop_main_body"
         android:layout_alignParentBottom="true"
-        android:background="@color/beige">
-    </com.fs.widget.TabMenuView>
- </RelativeLayout>
+        android:background="@color/beige"
+        android:scaleType="fitXY"/>
+
 
 </RelativeLayout>

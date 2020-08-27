@@ -32,12 +32,12 @@
         "source": "E:\\app\\MySchool\\app\\src\\main\\res\\drawable-mdpi\\find_nomal.png"
     },
     {
-        "merged": "E:\\app\\MySchool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_car_nomal.png.flat",
-        "source": "E:\\app\\MySchool\\app\\src\\main\\res\\drawable-mdpi\\car_nomal.png"
-    },
-    {
         "merged": "E:\\app\\MySchool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_singer_3.png.flat",
         "source": "E:\\app\\MySchool\\app\\src\\main\\res\\drawable-mdpi\\singer_3.png"
+    },
+    {
+        "merged": "E:\\app\\MySchool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_car_nomal.png.flat",
+        "source": "E:\\app\\MySchool\\app\\src\\main\\res\\drawable-mdpi\\car_nomal.png"
     },
     {
         "merged": "E:\\app\\MySchool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_rb_find_bg.xml.flat",
@@ -52,12 +52,12 @@
         "source": "E:\\app\\MySchool\\app\\src\\main\\res\\drawable-xhdpi\\g3.png"
     },
     {
-        "merged": "E:\\app\\MySchool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_dot_normal.xml.flat",
-        "source": "E:\\app\\MySchool\\app\\src\\main\\res\\drawable-mdpi\\dot_normal.xml"
-    },
-    {
         "merged": "E:\\app\\MySchool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_mine_nomal.png.flat",
         "source": "E:\\app\\MySchool\\app\\src\\main\\res\\drawable-mdpi\\mine_nomal.png"
+    },
+    {
+        "merged": "E:\\app\\MySchool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_dot_normal.xml.flat",
+        "source": "E:\\app\\MySchool\\app\\src\\main\\res\\drawable-mdpi\\dot_normal.xml"
     },
     {
         "merged": "E:\\app\\MySchool\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_g4.jpg.flat",

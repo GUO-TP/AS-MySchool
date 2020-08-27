@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/f5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/f5"
-    android:orientation="vertical"
-    android:background="@color/floralwhite">
+    android:background="@color/floralwhite"
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/username_ediText"
@@ -12,37 +12,39 @@
         android:layout_height="45dp"
         android:hint="请输入名字" />
 
-       <EditText
+    <EditText
         android:id="@+id/userpassword_ediText"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_below="@+id/username_ediText"
         android:hint="请输入密码" />
-      <Button
-           android:id="@+id/button1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignParentLeft="true"
-           android:layout_below="@+id/userpassword_ediText"
-           android:layout_marginLeft="44dp"
-           android:layout_marginTop="30dp"
-           android:text="登陆" />
-       <Button
-           android:id="@+id/button2"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignBaseline="@+id/button1"
-           android:layout_alignBottom="@+id/button1"
-           android:layout_alignParentRight="true"
-           android:layout_marginRight="46dp"
-           android:text="修密" />
 
-      <TextView
-          android:id="@+id/mytext"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_centerHorizontal="true"
-          android:layout_centerVertical="true"
-          android:text="还未登陆" />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userpassword_ediText"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="30dp"
+        android:text="登陆" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="46dp"
+        android:text="修密" />
+
+    <TextView
+        android:id="@+id/mytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="还未登陆" />
 
 </RelativeLayout>

@@ -3,14 +3,12 @@
     android:id="@+id/f2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/fenlei_left"
         android:layout_width="50dp"
         android:layout_height="match_parent"
-        android:layout_weight="4"
         android:background="@color/aqua"
         android:orientation="vertical">
 
@@ -18,40 +16,37 @@
             android:id="@+id/fenlei_left_btwaimai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="外卖"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="外卖" />
 
         <Button
             android:id="@+id/fenlei_left_btkuaidi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/fenlei_left_btwaimai"
-            android:text="快递"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="快递" />
 
         <Button
             android:id="@+id/fenlei_left_btgoods"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/fenlei_left_btkuaidi"
-            android:text="二货"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="二手货" />
 
         <Button
             android:id="@+id/fenlei_left_bt4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/fenlei_left_btgoods"
-            android:text="其他"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="其他" />
     </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/fenlei_right"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_toRightOf="@id/fenlei_left"
-        android:background="@color/gold">
+        android:layout_toEndOf="@id/fenlei_left"
+        android:background="@color/honeydew">
 
         <WebView
             android:id="@+id/fenlei_right_webview"
