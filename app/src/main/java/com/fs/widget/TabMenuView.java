@@ -6,6 +6,7 @@ import com.myschool.R;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -14,33 +15,33 @@ public class TabMenuView extends RelativeLayout implements View.OnClickListener 
 	Context context;
 
 	/**
-	 * Ö÷Ò³°´Å¥
+	 * ä¸»é¡µæŒ‰é’®
 	 */
-	RelativeLayout zhuYeLayout;
+	LinearLayout zhuYeLayout;
 	TextView zhuYeImage;
 
 	/**
-	 * ·ÖÀà
+	 * åˆ†ç±»
 	 */
-	RelativeLayout fenLeiLayout;
+	LinearLayout fenLeiLayout;
 	TextView fenLeiImage;
 
 	/**
-	 * ·¢ÏÖ
+	 * å‘ç°
 	 */
-	RelativeLayout faXianLayout;
+	LinearLayout faXianLayout;
 	TextView faXianImage;
 
 	/**
-	 * ¹ºÎï³µ
+	 * è´­ç‰©è½¦
 	 */
-	RelativeLayout gouWuCheLayout;
+	LinearLayout gouWuCheLayout;
 	TextView gouWuCheImage;
 
 	/**
-	 * ·¢ÏÖ
+	 * å‘ç°
 	 */
-	RelativeLayout woDeLayout;
+	LinearLayout woDeLayout;
 	TextView woDeImage;
 
 	public TabMenuView(Context context, AttributeSet attrs) {
@@ -56,18 +57,18 @@ public class TabMenuView extends RelativeLayout implements View.OnClickListener 
 	}
 
 	/**
-	 * ³õÊ¼»¯
+	 * åˆå§‹åŒ–
 	 */
 	private void init() {
-		// 1,°Ñ²¼¾ÖÎÄ¼ş×ªÎªÊÓÍ¼
+		// 1,æŠŠå¸ƒå±€æ–‡ä»¶è½¬ä¸ºè§†å›¾
 		View.inflate(context, R.layout.tab_menu_view, this);
 
 		getWidget();
 	}
 
 	private void getWidget() {
-		// 1,»ñµÃÍÆ¼ö°´Å¥µÄ²¼¾ÖÎÄ¼ş£¨ÉèÖÃ¼àÌı£©£¬ÎÄ±¾×Ö£¬ÎÄ±¾ÏÂÃæµÄÏßÑÕÉ«
-		zhuYeLayout = (RelativeLayout) this
+		// 1,è·å¾—æ¨èæŒ‰é’®çš„å¸ƒå±€æ–‡ä»¶ï¼ˆè®¾ç½®ç›‘å¬ï¼‰ï¼Œæ–‡æœ¬å­—ï¼Œæ–‡æœ¬ä¸‹é¢çš„çº¿é¢œè‰²
+		zhuYeLayout = (LinearLayout) this
 				.findViewById(R.id.tab_view_btn_zhuye);
 		zhuYeLayout.setOnClickListener(this);
 		zhuYeImage = (TextView) this
@@ -75,8 +76,8 @@ public class TabMenuView extends RelativeLayout implements View.OnClickListener 
 		// zhuYeWords =
 		// (TextView)this.findViewById(R.id.tab_view_btn_zhuye_words);
 
-		// 2,»ñµÃÅÅĞĞ°ñ°´Å¥µÄ²¼¾ÖÎÄ¼ş£¨ÉèÖÃ¼àÌı£©£¬ÎÄ±¾×Ö£¬ÎÄ±¾ÏÂÃæµÄÏßÑÕÉ«
-		fenLeiLayout = (RelativeLayout) this
+		// 2,è·å¾—æ’è¡Œæ¦œæŒ‰é’®çš„å¸ƒå±€æ–‡ä»¶ï¼ˆè®¾ç½®ç›‘å¬ï¼‰ï¼Œæ–‡æœ¬å­—ï¼Œæ–‡æœ¬ä¸‹é¢çš„çº¿é¢œè‰²
+		fenLeiLayout = (LinearLayout) this
 				.findViewById(R.id.tab_view_btn_fenlei);
 		fenLeiLayout.setOnClickListener(this);
 		fenLeiImage = (TextView) this
@@ -84,7 +85,7 @@ public class TabMenuView extends RelativeLayout implements View.OnClickListener 
 		// fenLeiWords =
 		// (TextView)this.findViewById(R.id.tab_view_btn_fenlei_words);
 
-		// 2,»ñµÃËÑË÷°´Å¥µÄ²¼¾ÖÎÄ¼ş£¨ÉèÖÃ¼àÌı£©£¬ÎÄ±¾×Ö£¬ÎÄ±¾ÏÂÃæµÄÏßÑÕÉ«
+		// 2,è·å¾—æœç´¢æŒ‰é’®çš„å¸ƒå±€æ–‡ä»¶ï¼ˆè®¾ç½®ç›‘å¬ï¼‰ï¼Œæ–‡æœ¬å­—ï¼Œæ–‡æœ¬ä¸‹é¢çš„çº¿é¢œè‰²
 //	//	faXianLayout = (RelativeLayout) this
 //	//			.findViewById(R.id.tab_view_btn_faxian);
 //	//	faXianLayout.setOnClickListener(this);
@@ -93,7 +94,7 @@ public class TabMenuView extends RelativeLayout implements View.OnClickListener 
 		// faXianWords =
 		// (TextView)this.findViewById(R.id.tab_view_btn_faxian_words);
 
-		// 2,»ñµÃËÑË÷°´Å¥µÄ²¼¾ÖÎÄ¼ş£¨ÉèÖÃ¼àÌı£©£¬ÎÄ±¾×Ö£¬ÎÄ±¾ÏÂÃæµÄÏßÑÕÉ«
+		// 2,è·å¾—æœç´¢æŒ‰é’®çš„å¸ƒå±€æ–‡ä»¶ï¼ˆè®¾ç½®ç›‘å¬ï¼‰ï¼Œæ–‡æœ¬å­—ï¼Œæ–‡æœ¬ä¸‹é¢çš„çº¿é¢œè‰²
 //	//	gouWuCheLayout = (RelativeLayout) this
 //	//			.findViewById(R.id.tab_view_btn_gouwuche);
 //	//	gouWuCheLayout.setOnClickListener(this);
@@ -102,8 +103,8 @@ public class TabMenuView extends RelativeLayout implements View.OnClickListener 
 		// gouWuCheWords =
 		// (TextView)this.findViewById(R.id.tab_view_btn_gouwuche_words);
 
-		// 2,»ñµÃËÑË÷°´Å¥µÄ²¼¾ÖÎÄ¼ş£¨ÉèÖÃ¼àÌı£©£¬ÎÄ±¾×Ö£¬ÎÄ±¾ÏÂÃæµÄÏßÑÕÉ«
-		woDeLayout = (RelativeLayout) this.findViewById(R.id.tab_view_btn_wode);
+		// 2,è·å¾—æœç´¢æŒ‰é’®çš„å¸ƒå±€æ–‡ä»¶ï¼ˆè®¾ç½®ç›‘å¬ï¼‰ï¼Œæ–‡æœ¬å­—ï¼Œæ–‡æœ¬ä¸‹é¢çš„çº¿é¢œè‰²
+		woDeLayout = (LinearLayout) this.findViewById(R.id.tab_view_btn_wode);
 		woDeLayout.setOnClickListener(this);
 		woDeImage = (TextView) this.findViewById(R.id.tab_view_btn_wode_image);
 		// woDeWords =
@@ -122,31 +123,31 @@ public class TabMenuView extends RelativeLayout implements View.OnClickListener 
 	private void changeState() {
 		switch (state) {
 		case STATE_SHOUYE:
-			// 1,°ÑÍÆ¼ö°´Å¥»¹Ô­
+			// 1,æŠŠæ¨èæŒ‰é’®è¿˜åŸ
 			zhuYeImage.setBackgroundResource(R.drawable.home_nomal);
 			// zhuYeImage.setTextColor(Color.BLACK);
 			// zhuYeWords.setBackgroundColor(Color.WHITE);
 			break;
 		case STATE_FENLEI:
-			// 1,°ÑÅÅĞĞ°ñ°´Å¥»¹Ô­
+			// 1,æŠŠæ’è¡Œæ¦œæŒ‰é’®è¿˜åŸ
 			fenLeiImage.setBackgroundResource(R.drawable.type_nomal);
 			// fenLeiWords.setBackgroundColor(Color.WHITE);
 			break;
 		case STATE_FAXIAN:
-			// 1,°ÑËÑË÷°´Å¥»¹Ô­
+			// 1,æŠŠæœç´¢æŒ‰é’®è¿˜åŸ
 
 			faXianImage.setBackgroundResource(R.drawable.find_nomal);
 			// faXianWords.setBackgroundColor(Color.WHITE);
 			break;
 
 		case STATE_GOUWUCHE:
-			// 1,°ÑËÑË÷°´Å¥»¹Ô­
+			// 1,æŠŠæœç´¢æŒ‰é’®è¿˜åŸ
 			gouWuCheImage.setBackgroundResource(R.drawable.car_nomal);
 			// gouWuCheWords.setBackgroundColor(Color.WHITE);
 			break;
 
 		case STATE_WODE:
-			// 1,°ÑËÑË÷°´Å¥»¹Ô­
+			// 1,æŠŠæœç´¢æŒ‰é’®è¿˜åŸ
 			woDeImage.setBackgroundResource(R.drawable.mine_nomal);
 			// woDeWords.setBackgroundColor(Color.WHITE);
 			break;
@@ -163,9 +164,9 @@ public class TabMenuView extends RelativeLayout implements View.OnClickListener 
 			zhuYeImage.setBackgroundResource(R.drawable.home_selected);
 			// zhuYeWords.setBackgroundColor(Color.GREEN);
 
-			// 2,¸Ä±äÖ®Ç°µÄ°´Å¥
+			// 2,æ”¹å˜ä¹‹å‰çš„æŒ‰é’®
 			changeState();
-			// 3,¸ü¸Ä×´Ì¬Öµ
+			// 3,æ›´æ”¹çŠ¶æ€å€¼
 			state = STATE_SHOUYE;
 			listener.OnShouYeClick();
 
@@ -175,9 +176,9 @@ public class TabMenuView extends RelativeLayout implements View.OnClickListener 
 			fenLeiImage.setBackgroundResource(R.drawable.type_selected);
 			// fenLeiWords.setBackgroundColor(Color.GREEN);
 
-			// 2,¸Ä±äÖ®Ç°µÄ°´Å¥
+			// 2,æ”¹å˜ä¹‹å‰çš„æŒ‰é’®
 			changeState();
-			// 3,¸ü¸Ä×´Ì¬Öµ
+			// 3,æ›´æ”¹çŠ¶æ€å€¼
 			state = STATE_FENLEI;
 
 			listener.OnFenLeiClick();
@@ -186,9 +187,9 @@ public class TabMenuView extends RelativeLayout implements View.OnClickListener 
 //		case R.id.tab_view_btn_faxian:
 //			faXianImage.setBackgroundResource(R.drawable.find_selected);
 //			// faXianWords.setBackgroundColor(Color.GREEN);
-//			// 2,¸Ä±äÖ®Ç°µÄ°´Å¥
+//			// 2,æ”¹å˜ä¹‹å‰çš„æŒ‰é’®
 //			changeState();
-//			// 3,¸ü¸Ä×´Ì¬Öµ
+//			// 3,æ›´æ”¹çŠ¶æ€å€¼
 //			state = STATE_FAXIAN;
 //			listener.OnFaXianClick();
 //			break;
@@ -196,9 +197,9 @@ public class TabMenuView extends RelativeLayout implements View.OnClickListener 
 //		case R.id.tab_view_btn_gouwuche:
 //			gouWuCheImage.setBackgroundResource(R.drawable.car_selected);
 //			// gouWuCheWords.setBackgroundColor(Color.GREEN);
-//			// 2,¸Ä±äÖ®Ç°µÄ°´Å¥
+//			// 2,æ”¹å˜ä¹‹å‰çš„æŒ‰é’®
 //			changeState();
-//			// 3,¸ü¸Ä×´Ì¬Öµ
+//			// 3,æ›´æ”¹çŠ¶æ€å€¼
 //			state = STATE_GOUWUCHE;
 //			listener.OnGouWuCheClick();
 //			break;
@@ -206,9 +207,9 @@ public class TabMenuView extends RelativeLayout implements View.OnClickListener 
 		case R.id.tab_view_btn_wode:
 			woDeImage.setBackgroundResource(R.drawable.mine_selected);
 			// woDeWords.setBackgroundColor(Color.GREEN);
-			// 2,¸Ä±äÖ®Ç°µÄ°´Å¥
+			// 2,æ”¹å˜ä¹‹å‰çš„æŒ‰é’®
 			changeState();
-			// 3,¸ü¸Ä×´Ì¬Öµ
+			// 3,æ›´æ”¹çŠ¶æ€å€¼
 			state = STATE_WODE;
 			listener.OnWoDeClick();
 			;

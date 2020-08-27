@@ -38,23 +38,23 @@ public class MainActivity extends FragmentActivity {
 //	GouWuCheFragment gouWuCheFragment;
 	WoDeFragment woDeFragment;
 	/**
-	 * Ö÷Ò³°´Å¥
+	 * ä¸»é¡µæŒ‰é’®
 	 */
 	TextView zhuYeImage;
 	/**
-	 * ·ÖÀà
+	 * åˆ†ç±»
 	 */
 	TextView fenLeiImage;
 	/**
-	 * ·¢ÏÖ
+	 * å‘ç°
 	 */
 	//TextView faXianImage;
 	/**
-	 * ¹ºÎï³µ
+	 * è´­ç‰©è½¦
 	 */
 	//TextView gouWuCheImage;
 	/**
-	 * ·¢ÏÖ
+	 * å‘ç°
 	 */
 	TextView woDeImage;
 
@@ -62,8 +62,8 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		this.requestWindowFeature(Window.FEATURE_NO_TITLE);//È¥µô±êÌâÀ¸
-		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//È¥µôĞÅÏ¢À¸
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);//å»æ‰æ ‡é¢˜æ 
+		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//å»æ‰ä¿¡æ¯æ 
 		setContentView(R.layout.activity_main);
 		zhuYeImage = (TextView) this
 				.findViewById(R.id.tab_view_btn_zhuye_image);
@@ -81,21 +81,21 @@ public class MainActivity extends FragmentActivity {
 	}
 
 	/**
-	 * ÉèÖÃÆÁÄ»µÄ¿íºÍ¸ß
+	 * è®¾ç½®å±å¹•çš„å®½å’Œé«˜
 	 */
 	private void setInitData() {
 		// TODO Auto-generated method stub
-		// 1,»ñµÃ×ÊÔ´¶ÔÏó
+		// 1,è·å¾—èµ„æºå¯¹è±¡
 		Resources resources = this.getResources();
-		// 2,»ñµÃÏÔÊ¾µÄ²ÎÊı
+		// 2,è·å¾—æ˜¾ç¤ºçš„å‚æ•°
 		DisplayMetrics display = resources.getDisplayMetrics();
-		// 3,ÉèÖÃÆÁÄ»µÄ¿í¶ÈºÍ¸ß¶È
+		// 3,è®¾ç½®å±å¹•çš„å®½åº¦å’Œé«˜åº¦
 		Constant.width = display.widthPixels;
 		Constant.height = display.heightPixels;
 	}
 
 	/**
-	 * »ñµÃÏà¹ØµÄ×é¼ş
+	 * è·å¾—ç›¸å…³çš„ç»„ä»¶
 	 */
 	private void getWidget() {
 		// TODO Auto-generated method stub
@@ -115,7 +115,7 @@ public class MainActivity extends FragmentActivity {
 		tabMenuView.setOnMyClickListener(new com.fs.widget.OnMyClickListener() {
 //			@Override
 //			public void OnFaXianClick() {
-//				// ÏÔÊ¾FaXianÒ³Ãæ
+//				// æ˜¾ç¤ºFaXiané¡µé¢
 //				viewPage.setCurrentItem(2);
 //
 //				// faXianImage.setBackgroundResource(R.drawable.find_selected);
@@ -123,7 +123,7 @@ public class MainActivity extends FragmentActivity {
 
 			@Override
 			public void OnShouYeClick() {
-				// ÏÔÊ¾ShouYeÒ³Ãæ
+				// æ˜¾ç¤ºShouYeé¡µé¢
 				viewPage.setCurrentItem(0);
 				// zhuYeImage.setBackgroundResource(R.drawable.home_selected);
 
@@ -131,7 +131,7 @@ public class MainActivity extends FragmentActivity {
 
 			@Override
 			public void OnFenLeiClick() {
-				// ÏÔÊ¾FenLeiÒ³Ãæ
+				// æ˜¾ç¤ºFenLeié¡µé¢
 				viewPage.setCurrentItem(1);
 				// fenLeiImage.setBackgroundResource(R.drawable.type_selected);
 			}
@@ -154,27 +154,27 @@ public class MainActivity extends FragmentActivity {
 
 	private void getViewPager() {
 		// TODO Auto-generated method stub
-		// 1,»ñµÃÍÆ¼öÒ³Ãæ
+		// 1,è·å¾—æ¨èé¡µé¢
 		shouYeFragment = new ShouYeFragment();
-		// 2,»ñµÃÅÅĞĞ°ñÒ³Ãæ
+		// 2,è·å¾—æ’è¡Œæ¦œé¡µé¢
 		fenLeiFragment = new FenLeiFragment();
-		// 3,»ñµÃËÑË÷Ò³Ãæ
+		// 3,è·å¾—æœç´¢é¡µé¢
 //		faXianFragment = new FaXianFragment();
 //		gouWuCheFragment = new GouWuCheFragment();
 		woDeFragment = new WoDeFragment();
-		// 4,°ÑfragmentÌí¼Óµ½ÈİÆ÷
+		// 4,æŠŠfragmentæ·»åŠ åˆ°å®¹å™¨
 		pages.add(shouYeFragment);
 		pages.add(fenLeiFragment);
 //		pages.add(faXianFragment);
 //		pages.add(gouWuCheFragment);
 		pages.add(woDeFragment);
-		// 5,»ñµÃ×é¼ş
+		// 5,è·å¾—ç»„ä»¶
 		viewPage = (ViewPager) findViewById(R.id.shop_main_body);
-		// 6,´´½¨ÊÊÅäÆ÷
+		// 6,åˆ›å»ºé€‚é…å™¨
 		myAdapter = new MyAdapter(getSupportFragmentManager());
-		// 7,ÏÔÊ¾ÄÚÈİ
+		// 7,æ˜¾ç¤ºå†…å®¹
 		viewPage.setAdapter(myAdapter);
-		// 8,ÉèÖÃ¼àÌı
+		// 8,è®¾ç½®ç›‘å¬
 		viewPage.setOnPageChangeListener(new OnPageChangeListener() {
 			@Override
 			public void onPageSelected(int v) {

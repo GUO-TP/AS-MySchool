@@ -29,7 +29,7 @@ public class MyAListAdapter extends BaseAdapter {
 
 	public MyAListAdapter(List<Singer> lists,Context context){
 		this.list=lists;
-        //Ëü´ú±íMainActivity
+        //å®ƒä»£è¡¨MainActivity
 		this.context=context;
 		length=list.size();
 	}
@@ -55,31 +55,31 @@ public class MyAListAdapter extends BaseAdapter {
 	@Override
 	public View getView(int index, View view, ViewGroup arg2) {
 
-		//´ÓÄÚ´æµÄ½Ç¶È¿¼ÂÇ
+		//ä»å†…å­˜çš„è§’åº¦è€ƒè™‘
 		if(view==null){
-			//°ÑÒ»¸ö²¼¾Ö×ªÎªView£¬
+			//æŠŠä¸€ä¸ªå¸ƒå±€è½¬ä¸ºViewï¼Œ
 			view= ((Activity)context).getLayoutInflater().inflate(R.layout.list_view_tab, null);
 		}
 
 
-		//2,´ÓviewÀïÃæ»ñµÃImageView×é¼ş
+		//2,ä»viewé‡Œé¢è·å¾—ImageViewç»„ä»¶
 		ImageView imageView = (ImageView)view.findViewById(R.id.imageView);
-		//3,´ÓviewÀïÃæ»ñµÃTextView×é¼ş
+		//3,ä»viewé‡Œé¢è·å¾—TextViewç»„ä»¶
 		TextView name =(TextView)view.findViewById(R.id.name);
-		//4,´ÓviewÀïÃæ»ñµÃTextView×é¼ş
+		//4,ä»viewé‡Œé¢è·å¾—TextViewç»„ä»¶
 		TextView introduce =(TextView)view.findViewById(R.id.introduce);
 
 
 
-		//5£¬×¼±¸Êı¾İ
+		//5ï¼Œå‡†å¤‡æ•°æ®
 		Singer singer =list.get(index);
 
-		//6£¬´Ósinger¶ÔÏó»ñµÃÊı¾İ
+		//6ï¼Œä»singerå¯¹è±¡è·å¾—æ•°æ®
 		int ImageId= singer.getImageId();
 		String nameInfor =singer.getName();
 		String introduceInfor=singer.getIntroduce();
 
-		//7£¬Ïò×é¼şÌí¼ÓÊı¾İ
+		//7ï¼Œå‘ç»„ä»¶æ·»åŠ æ•°æ®
 		imageView.setImageResource(ImageId);
 		name.setText(nameInfor);
 		introduce.setText(introduceInfor);

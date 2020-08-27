@@ -25,13 +25,13 @@ public class MyScollview extends ScrollView{
              return super.onInterceptTouchEvent(ev);
          } else {
              if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-                 // ½«¸¸scrollviewµÄ¹ö¶¯ÊÂ¼şÀ¹½Ø
+                 // å°†çˆ¶scrollviewçš„æ»šåŠ¨äº‹ä»¶æ‹¦æˆª
                  currentY = (int) ev.getY();
                  setParentScrollAble(false);
                 
                  return super.onInterceptTouchEvent(ev);
              } else if (ev.getAction() == MotionEvent.ACTION_UP) {
-                 // °Ñ¹ö¶¯ÊÂ¼ş»Ö¸´¸ø¸¸Scrollview
+                 // æŠŠæ»šåŠ¨äº‹ä»¶æ¢å¤ç»™çˆ¶Scrollview
                  setParentScrollAble(true);
              } else if (ev.getAction() == MotionEvent.ACTION_MOVE) {
              }

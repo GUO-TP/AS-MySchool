@@ -75,7 +75,7 @@ public class WoDeFragment extends Fragment implements OnClickListener{
 	     case R.id.button2:
 	    	// Intent intent = new Intent();
 	    	 Intent intent = new Intent();
-				//ÉèÖÃÒâÍ¼
+				//è®¾ç½®æ„å›¾
 	    	 Context context =this.getActivity();
                
 			intent.setClass(context,UpdateActivity.class);
@@ -95,12 +95,12 @@ public class WoDeFragment extends Fragment implements OnClickListener{
 		String password=etuserpass.getText().toString().trim();
 		if(username.equals("")){
 			
-			Toast.makeText(context,"ÓÃ»§Ãû²»ÄÜÎª¿Õ", 0).show();
+			Toast.makeText(context,"ç”¨æˆ·åä¸èƒ½ä¸ºç©º", Toast.LENGTH_SHORT).show();
 			return false;
 		}
      if(password.equals("")){
 			
-			Toast.makeText(context,"ÃÜÂë²»ÄÜÎª¿Õ", 0).show();
+			Toast.makeText(context,"å¯†ç ä¸èƒ½ä¸ºç©º", Toast.LENGTH_SHORT).show();
 			return false;
 		}
 
@@ -119,42 +119,42 @@ class LoginPostThread extends Thread {
 		String url="http://192.168.1.107:8080/a_stusys/Student/showStudentByNameAndPassword.do";
 		//String url="http://192.168.1.107:8080/a_stusys/Student/showStudentByNameAndPassword.do?name="+username+"&password="+password+"";
 		try {
-			//´´½¨Ò»¸öURI¶ÔÏó£¬²¢ÇÒÖ¸¶¨·şÎñÆ÷µÄurlµØÖ·
+			//åˆ›å»ºä¸€ä¸ªURIå¯¹è±¡ï¼Œå¹¶ä¸”æŒ‡å®šæœåŠ¡å™¨çš„urlåœ°å€
 			URI uri = URI.create(url);
 			
-			//´´½¨HttpClient¶ÔÏó
+			//åˆ›å»ºHttpClientå¯¹è±¡
 			HttpClient client = new DefaultHttpClient();
 			
-			//´´½¨HttpPost¶ÔÏó£¬²¢ÇÒ½«uri·â×°µ½Õâ¸öÇëÇó¶ÔÏóÖĞ
+			//åˆ›å»ºHttpPostå¯¹è±¡ï¼Œå¹¶ä¸”å°†uriå°è£…åˆ°è¿™ä¸ªè¯·æ±‚å¯¹è±¡ä¸­
 			HttpPost post = new HttpPost(uri);
 			
-			//´´½¨¼¯ºÏ£¬ÓÃÀ´·â×°Òª·¢ËÍµ½·şÎñÆ÷µÄ¼üÖµ¶Ô¶ÔÏóNameValuePair
+			//åˆ›å»ºé›†åˆï¼Œç”¨æ¥å°è£…è¦å‘é€åˆ°æœåŠ¡å™¨çš„é”®å€¼å¯¹å¯¹è±¡NameValuePair
 			List<NameValuePair> list = new ArrayList<NameValuePair>();
-			//´´½¨NameValuePair¶ÔÏó²¢Ìí¼Ó¼üÖµ¶ÔĞÅÏ¢
+			//åˆ›å»ºNameValuePairå¯¹è±¡å¹¶æ·»åŠ é”®å€¼å¯¹ä¿¡æ¯
 			NameValuePair pair1 = new BasicNameValuePair("name",  username);
 			NameValuePair pair2 = new BasicNameValuePair("password", password);
-			//½«NameValuePair¶ÔÏóÌí¼Óµ½List¼¯ºÏÖĞ
+			//å°†NameValuePairå¯¹è±¡æ·»åŠ åˆ°Listé›†åˆä¸­
 			list.add(pair1);
 			list.add(pair2);
-			//ÎªÇëÇó¶ÔÏóÉèÖÃEntity£¬EntityÖĞ·â×°ÁËÇëÇó²ÎÊıĞÅÏ¢
+			//ä¸ºè¯·æ±‚å¯¹è±¡è®¾ç½®Entityï¼ŒEntityä¸­å°è£…äº†è¯·æ±‚å‚æ•°ä¿¡æ¯
 			post.setEntity(new UrlEncodedFormEntity(list, HTTP.UTF_8));
 			
-			//Í¨¹ıHttpClient¶ÔÏóÇëÇó·şÎñÆ÷£¬²¢´«µİÇëÇó¶ÔÏó
+			//é€šè¿‡HttpClientå¯¹è±¡è¯·æ±‚æœåŠ¡å™¨ï¼Œå¹¶ä¼ é€’è¯·æ±‚å¯¹è±¡
 			HttpResponse response = client.execute(post);
 			
-			//»ñÈ¡×´Ì¬Âë
+			//è·å–çŠ¶æ€ç 
 			int code = response.getStatusLine().getStatusCode();
-			if(code == 200) {//ÅĞ¶ÏÊÇ·ñÏìÓ¦³É¹¦
-				//È¡³öÏûÏ¢ÊµÌå
+			if(code == 200) {//åˆ¤æ–­æ˜¯å¦å“åº”æˆåŠŸ
+				//å–å‡ºæ¶ˆæ¯å®ä½“
 				HttpEntity entity = response.getEntity();
 				
-				//½«ÏûÏ¢ÊµÌå×ªÎª×Ö·û´®
+				//å°†æ¶ˆæ¯å®ä½“è½¬ä¸ºå­—ç¬¦ä¸²
 				String data = EntityUtils.toString(entity);
 				
-				//½«´Ó·şÎñÆ÷»ñÈ¡µÄÊı¾İ·¢ËÍµ½UIÏß³ÌÏÔÊ¾
-				Message msg = new Message();//´´½¨Message¶ÔÏó£¬ÓÃÀ´·â×°Òª·¢ËÍµÄÊı¾İ
-				msg.obj = data;//½«Êı¾İ·â×°µ½Message¶ÔÏóµÄobj±äÁ¿ÖĞ
-				postHandler.sendMessage(msg);//·¢ËÍMessage¶ÔÏóµ½UIÏß³Ì
+				//å°†ä»æœåŠ¡å™¨è·å–çš„æ•°æ®å‘é€åˆ°UIçº¿ç¨‹æ˜¾ç¤º
+				Message msg = new Message();//åˆ›å»ºMessageå¯¹è±¡ï¼Œç”¨æ¥å°è£…è¦å‘é€çš„æ•°æ®
+				msg.obj = data;//å°†æ•°æ®å°è£…åˆ°Messageå¯¹è±¡çš„objå˜é‡ä¸­
+				postHandler.sendMessage(msg);//å‘é€Messageå¯¹è±¡åˆ°UIçº¿ç¨‹
 				
 			}
 			
@@ -167,17 +167,17 @@ class PostHandler extends Handler {
 	@Override
 	public void handleMessage(Message msg) {
 		super.handleMessage(msg);
-		//È¡³öÊı¾İ
+		//å–å‡ºæ•°æ®
 		String data = (String) msg.obj;
 		
-		//ÏÔÊ¾Êı¾İ
+		//æ˜¾ç¤ºæ•°æ®
 		if(data.equals("1"))
 		{
-			Toast.makeText(context,"µÇÂ½³É¹¦,ÄãµÄIDÎª"+data, 0).show();
-			text.setText("ÒÑµÇÂ½");
+			Toast.makeText(context,"ç™»é™†æˆåŠŸ,ä½ çš„IDä¸º"+data, Toast.LENGTH_SHORT).show();
+			text.setText("å·²ç™»é™†");
 		}
 		else
-			Toast.makeText(context,"µÇÂ½Ê§°ÜÄãµÄIDÎª"+data, 0).show();
+			Toast.makeText(context,"ç™»é™†å¤±è´¥ä½ çš„IDä¸º"+data, Toast.LENGTH_SHORT).show();
 		//tv_show.setText(data);
 	}
 }

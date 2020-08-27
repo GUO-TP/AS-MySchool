@@ -21,7 +21,7 @@ public class MyBListAdapter extends BaseAdapter {
 	
 	public MyBListAdapter(List<Type> lists,Context context){
 		this.list=lists;
-		//Ëü´ú±íMainActivity
+		//å®ƒä»£è¡¨MainActivity
 		this.context=context;
 		length=list.size();
 	}
@@ -47,18 +47,18 @@ public class MyBListAdapter extends BaseAdapter {
 	@Override
 	public View getView(int index, View view, ViewGroup arg2) {
 		
-//		//´ÓÄÚ´æµÄ½Ç¶È¿¼ÂÇ
+//		//ä»Žå†…å­˜çš„è§’åº¦è€ƒè™‘
 //		if(view==null){
-//			//°ÑÒ»¸ö²¼¾Ö×ªÎªView£¬
+//			//æŠŠä¸€ä¸ªå¸ƒå±€è½¬ä¸ºViewï¼Œ
 //			view= ((Activity)context).getLayoutInflater().inflate(R.layout.list_text_view, null);					
 //		}
 //		
 //	
-//		//3,´ÓviewÀïÃæ»ñµÃTextView×é¼þ
+//		//3,ä»Žviewé‡Œé¢èŽ·å¾—TextViewç»„ä»¶
 //		TextView blistview =(TextView)view.findViewById(R.id.textView);
 //		
 //	
-//		//5£¬×¼±¸Êý¾Ý
+//		//5ï¼Œå‡†å¤‡æ•°æ®
 //		Type type =list.get(index);
 //
 //		
@@ -70,9 +70,9 @@ public class MyBListAdapter extends BaseAdapter {
 //	}
 	ViewHold viewHold=null;
 	if (view == null) {
-		// 1,°Ñ²¼¾ÖÎÄ¼þ×ªÎªview
+		// 1,æŠŠå¸ƒå±€æ–‡ä»¶è½¬ä¸ºview
 		view = View.inflate(context, R.layout.list_text_view, null);
-        //2,´´½¨´æ·ÅÒýÓÃµÄÈÝÆ÷
+        //2,åˆ›å»ºå­˜æ”¾å¼•ç”¨çš„å®¹å™¨
 		viewHold = new ViewHold();
 		
 		viewHold.text = (TextView) view.findViewById(R.id.textView);
@@ -86,11 +86,11 @@ public class MyBListAdapter extends BaseAdapter {
 
 	
 
-	// 9,»ñµÃÒªÏÔÊ¾µÄÊý¾Ý
+	// 9,èŽ·å¾—è¦æ˜¾ç¤ºçš„æ•°æ®
 	Type type =list.get(index);
 
 
-	// 11,ÉèÖÃ±êÌâ
+	// 11,è®¾ç½®æ ‡é¢˜
 	String title = type.getTypeinfo();
 	if (title.length() > 8) {
 		title = title.substring(0, 6) + "...";
@@ -102,7 +102,7 @@ public class MyBListAdapter extends BaseAdapter {
 }
 
 class ViewHold {
-	// 2,»ñµÃÍ¼Æ¬×é¼þ
+	// 2,èŽ·å¾—å›¾ç‰‡ç»„ä»¶
 	
 	TextView text;
 

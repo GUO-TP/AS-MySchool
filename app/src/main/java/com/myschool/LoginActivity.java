@@ -25,16 +25,16 @@ public class LoginActivity extends Activity {
     private Context context =  LoginActivity.this;  
     private MyAdapter myAdapter;  
     private RunnableTask runnableTask = new RunnableTask();  
-    // ×¼±¸ÒªÏÔÊ¾µÄÍ¼Æ¬×ÊÔ´  
+    // å‡†å¤‡è¦æ˜¾ç¤ºçš„å›¾ç‰‡èµ„æº  
 //    private int[] imageIdArray = { R.drawable.shang_nine, R.drawable.shang_ten,  
 //            R.drawable.tu_gangaoyou };  
-    // ×¼±¸title  
+    // å‡†å¤‡title  
     private String[] titleArray = { "aaa", "bbb", "ccc" };  
-    // ÂÖ²¥Í¼ÏÔÊ¾µÄµ±Ç°Ò³  
+    // è½®æ’­å›¾æ˜¾ç¤ºçš„å½“å‰é¡µ  
 //    private int currentPosition =Integer.MAX_VALUE/2-((Integer.MAX_VALUE/2)%imageIdArray.length);  
 //    int middle=Integer.MAX_VALUE/2-(Integer.MAX_VALUE/2%imageIdArray.length);  
     /** 
-     * ·ÅÖÃµãµÄ¼¯ºÏ 
+     * æ”¾ç½®ç‚¹çš„é›†åˆ 
      */  
     private List<View> viewList = new ArrayList<View>();  
   
@@ -42,24 +42,24 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {  
         super.onCreate(savedInstanceState);  
 //        setContentView(R.layout.item);  
-//        // ÕÒµ½ViewPager¿Ø¼ş  
+//        // æ‰¾åˆ°ViewPageræ§ä»¶  
 //        viewpager = (ViewPager) findViewById(R.id.vp);  
     }  
   
     @Override  
     protected void onResume() {  
         super.onResume();  
-        // ¡ïÍ¼Æ¬¹ö¶¯µÄÈë¿Ú,ÎªÊ²Ã´Ğ´ÔÚonResume·½·¨ÀïÄØ£¿  
-        // ¡ïÒòÎªµ±viewÊ§È¥½¹µãÊ±£¬Í£Ö¹¹ö¶¯£¬ÔÚÖØĞÂ»ñÈ¡½¹µãÊ±Òª¼ÌĞø¹ö¶¯ÆğÀ´  
-        // ¡ïÈç¹ûĞ´ÔÚonCreate·½·¨Àï£¬Ö»ÊÇactivityµÚÒ»´Î´´½¨Ê±²Å»á¹ö¶¯£¬Ò»µ«Í£Ö¹¹ö¶¯£¬ÔÙ´Î»ñÈ¡½¹µãÒ²²»»á¹ö¶¯ÁË  
+        // â˜…å›¾ç‰‡æ»šåŠ¨çš„å…¥å£,ä¸ºä»€ä¹ˆå†™åœ¨onResumeæ–¹æ³•é‡Œå‘¢ï¼Ÿ  
+        // â˜…å› ä¸ºå½“viewå¤±å»ç„¦ç‚¹æ—¶ï¼Œåœæ­¢æ»šåŠ¨ï¼Œåœ¨é‡æ–°è·å–ç„¦ç‚¹æ—¶è¦ç»§ç»­æ»šåŠ¨èµ·æ¥  
+        // â˜…å¦‚æœå†™åœ¨onCreateæ–¹æ³•é‡Œï¼Œåªæ˜¯activityç¬¬ä¸€æ¬¡åˆ›å»ºæ—¶æ‰ä¼šæ»šåŠ¨ï¼Œä¸€ä½†åœæ­¢æ»šåŠ¨ï¼Œå†æ¬¡è·å–ç„¦ç‚¹ä¹Ÿä¸ä¼šæ»šåŠ¨äº†  
         startRoll();  
         viewpager.setOnPageChangeListener(new OnPageChangeListener() {  
   
             @Override  
             public void onPageSelected(int arg0) {  
-                //¡ï¡ï¡ï¡ï¡ï µ±ÂÖ²¥Í¼ÏÔÊ¾µ±Ç°Ò³Ê±£¬Ò»¶¨Òª°ÑcurrentPositionÉèÎªarg0£¬  
-                //¡ï¡ï¡ï¡ï¡ï ·ñÔò£¬µ±ÄãÓÃÊÖÖ¸»¬¶¯ÂÖ²¥Í¼Ê±£¬·ÅÊÖºó£¬ÂÖ²¥Í¼ÏÔÊ¾µÄÏÂÒ»ÕÅÒ³ÃæÊÇ²¢²»ÊÇµ±Ç°ÏÔÊ¾Ò³ÃæµÄÏÂÒ»Ò³  
-                // ¡ï¡ï¡ï¡ï¡ï¶øÊÇ£¬Ëû×Ô¼º¸ù¾İ3ÃëÖÓ¼ÆËãµÃµ½µÄÏÂÒ»Ò³  
+                //â˜…â˜…â˜…â˜…â˜… å½“è½®æ’­å›¾æ˜¾ç¤ºå½“å‰é¡µæ—¶ï¼Œä¸€å®šè¦æŠŠcurrentPositionè®¾ä¸ºarg0ï¼Œ  
+                //â˜…â˜…â˜…â˜…â˜… å¦åˆ™ï¼Œå½“ä½ ç”¨æ‰‹æŒ‡æ»‘åŠ¨è½®æ’­å›¾æ—¶ï¼Œæ”¾æ‰‹åï¼Œè½®æ’­å›¾æ˜¾ç¤ºçš„ä¸‹ä¸€å¼ é¡µé¢æ˜¯å¹¶ä¸æ˜¯å½“å‰æ˜¾ç¤ºé¡µé¢çš„ä¸‹ä¸€é¡µ  
+                // â˜…â˜…â˜…â˜…â˜…è€Œæ˜¯ï¼Œä»–è‡ªå·±æ ¹æ®3ç§’é’Ÿè®¡ç®—å¾—åˆ°çš„ä¸‹ä¸€é¡µ  
                 //currentPosition = arg0;  
             }  
   
@@ -78,48 +78,48 @@ public class LoginActivity extends Activity {
     }  
   
     /** 
-     * ÈÃÂÖ²¥Í¼viewpager¹ö¶¯ÆğÀ´ 
+     * è®©è½®æ’­å›¾viewpageræ»šåŠ¨èµ·æ¥ 
      */  
     public void startRoll() {  
-        // ¹ö¶¯viewpager  
+        // æ»šåŠ¨viewpager  
         if (myAdapter == null) {  
-            // 1.µÚÒ»´Î³õÊ¼»¯ÊÊÅäÆ÷  
+            // 1.ç¬¬ä¸€æ¬¡åˆå§‹åŒ–é€‚é…å™¨  
             myAdapter = new MyAdapter();  
             viewpager.setAdapter(myAdapter);  
          //   viewpager.setCurrentItem(currentPosition);  
-        } else {// 8.µÚ¶ş´Î£¬Ö»ĞèÒªÍ¨ÖªÊÊÅäÆ÷Êı¾İ·¢ÉúÁË±ä»¯£¬ÒªË¢ĞÂUi  
+        } else {// 8.ç¬¬äºŒæ¬¡ï¼Œåªéœ€è¦é€šçŸ¥é€‚é…å™¨æ•°æ®å‘ç”Ÿäº†å˜åŒ–ï¼Œè¦åˆ·æ–°Ui  
             myAdapter.notifyDataSetChanged();  
         }  
-        // 2.·¢ËÍÒ»¸öÑÓÊ±µÄÏûÏ¢£¬3ÃëºóÖ´ĞĞrunnableTaskÀàÀïrun·½·¨ÀïµÄ²Ù×÷  
-        // ¡ï£¨ÎªÊ²Ã´Ö´ĞĞµÄÊÇrunnableTask£¬¶ø²»ÊÇhandleMessageÄØ£¿ÕâÀïÉæ¼°µ½handlerÏûÏ¢»úÖÆÔ´Âë½âÎö£©  
+        // 2.å‘é€ä¸€ä¸ªå»¶æ—¶çš„æ¶ˆæ¯ï¼Œ3ç§’åæ‰§è¡ŒrunnableTaskç±»é‡Œrunæ–¹æ³•é‡Œçš„æ“ä½œ  
+        // â˜…ï¼ˆä¸ºä»€ä¹ˆæ‰§è¡Œçš„æ˜¯runnableTaskï¼Œè€Œä¸æ˜¯handleMessageå‘¢ï¼Ÿè¿™é‡Œæ¶‰åŠåˆ°handleræ¶ˆæ¯æœºåˆ¶æºç è§£æï¼‰  
         handler.postDelayed(runnableTask, 3000);  
     }  
   
     class RunnableTask implements Runnable {  
         @Override  
         public void run() {  
-            // 3.±ä»¯ÂÖ²¥Í¼µ±Ç°ÒªÏÔÊ¾µÄÒ³ÃæÎ»ÖÃ£¬µİÔö1£¬ÎªÁË²»Ê¹Õâ¸öÊı×ÖµİÔö³¬¹ıÂÖ²¥Í¼ Í¼Æ¬µÄ¸öÊı£¬È¡ÓàÊı  
+            // 3.å˜åŒ–è½®æ’­å›¾å½“å‰è¦æ˜¾ç¤ºçš„é¡µé¢ä½ç½®ï¼Œé€’å¢1ï¼Œä¸ºäº†ä¸ä½¿è¿™ä¸ªæ•°å­—é€’å¢è¶…è¿‡è½®æ’­å›¾ å›¾ç‰‡çš„ä¸ªæ•°ï¼Œå–ä½™æ•°  
          //   currentPosition = currentPosition + 1;  
-            // 4.·¢ËÍÏûÏ¢¸øÖ÷Ïß³ÌµÄhandler  
+            // 4.å‘é€æ¶ˆæ¯ç»™ä¸»çº¿ç¨‹çš„handler  
             handler.obtainMessage().sendToTarget();  
         }  
     }  
   
     private Handler handler = new Handler() {  
-        // 5.½ÓÊÕ²¢´¦Àírun·½·¨·¢À´µÄÏûÏ¢  
+        // 5.æ¥æ”¶å¹¶å¤„ç†runæ–¹æ³•å‘æ¥çš„æ¶ˆæ¯  
         public void handleMessage(android.os.Message msg) {  
-            // 6.viewpagerÉèÖÃĞÂµÄµ±Ç°Ò³  
+            // 6.viewpagerè®¾ç½®æ–°çš„å½“å‰é¡µ  
           //  viewpager.setCurrentItem(currentPosition);  
-            // 7.¼ÌĞøÖ´ĞĞstartRoll·½·¨£¬³ÉÎªÒ»¸öÑ­»·  
+            // 7.ç»§ç»­æ‰§è¡ŒstartRollæ–¹æ³•ï¼Œæˆä¸ºä¸€ä¸ªå¾ªç¯  
             startRoll();  
         }  
     };  
   
     /** 
-     * ¡ïµ±ÊÖÖ¸°´×¡ÂÖ²¥Í¼²»¶¯Ê±£¬ÂÖ²¥Í¼Í£Ö¹¹ö¶¯£»µ±µã»÷ÂÖ²¥Í¼Ê±£¬Ìø×ªµ½Ïà¹Ø½çÃæ 
+     * â˜…å½“æ‰‹æŒ‡æŒ‰ä½è½®æ’­å›¾ä¸åŠ¨æ—¶ï¼Œè½®æ’­å›¾åœæ­¢æ»šåŠ¨ï¼›å½“ç‚¹å‡»è½®æ’­å›¾æ—¶ï¼Œè·³è½¬åˆ°ç›¸å…³ç•Œé¢ 
      */  
     public void onTouchViewPager(View view, final int position) {  
-        // ¸øÍ¼Æ¬×¢²á´¥ÃşÊÂ¼ş¼àÌıÆ÷  
+        // ç»™å›¾ç‰‡æ³¨å†Œè§¦æ‘¸äº‹ä»¶ç›‘å¬å™¨  
         view.setOnTouchListener(new OnTouchListener() {  
   
             private long downTime;  
@@ -128,24 +128,24 @@ public class LoginActivity extends Activity {
             @Override  
             public boolean onTouch(View v, MotionEvent event) {  
                 switch (event.getAction()) {  
-                case MotionEvent.ACTION_DOWN:// °´ÏÂÈ¥Ê±£¬¼ÇÂ¼°´ÏÂµÄ×ø±êºÍÊ±¼ä£¬ÓÃÓÚÅĞ¶ÏÊÇ·ñÊÇµã»÷ÊÂ¼ş  
-                    handler.removeCallbacksAndMessages(null);// ÊÖÖ¸°´ÏÂÊ±£¬È¡ÏûËùÓĞÊÂ¼ş£¬¼´ÂÖ²¥Í¼²»ÔÚ¹ö¶¯ÁË  
+                case MotionEvent.ACTION_DOWN:// æŒ‰ä¸‹å»æ—¶ï¼Œè®°å½•æŒ‰ä¸‹çš„åæ ‡å’Œæ—¶é—´ï¼Œç”¨äºåˆ¤æ–­æ˜¯å¦æ˜¯ç‚¹å‡»äº‹ä»¶  
+                    handler.removeCallbacksAndMessages(null);// æ‰‹æŒ‡æŒ‰ä¸‹æ—¶ï¼Œå–æ¶ˆæ‰€æœ‰äº‹ä»¶ï¼Œå³è½®æ’­å›¾ä¸åœ¨æ»šåŠ¨äº†  
                     downX = (int) event.getX();  
                     downTime = System.currentTimeMillis();  
                     break;  
-                case MotionEvent.ACTION_UP:// Ì§ÆğÊÖÖ¸Ê±£¬ÅĞ¶ÏÂäÏÂÌ§ÆğµÄÊ±¼ä²îºÍ×ø±ê£¬·ûºÏÒÔÏÂÌõ¼şÎªµã»÷  
-                    // Toast.makeText(context, "ÊÖÖ¸Ì§ÆğÁË", 0).show();  
+                case MotionEvent.ACTION_UP:// æŠ¬èµ·æ‰‹æŒ‡æ—¶ï¼Œåˆ¤æ–­è½ä¸‹æŠ¬èµ·çš„æ—¶é—´å·®å’Œåæ ‡ï¼Œç¬¦åˆä»¥ä¸‹æ¡ä»¶ä¸ºç‚¹å‡»  
+                    // Toast.makeText(context, "æ‰‹æŒ‡æŠ¬èµ·äº†", 0).show();  
                     if (System.currentTimeMillis() - downTime < 500  
-                            && Math.abs(downX - event.getX()) < 30) {// ¡ï¿¼ÂÇµ½ÊÖ°´ÏÂºÍÌ§ÆğÊ±µÄ×ø±ê²»¿ÉÄÜÍêÈ«ÖØºÏ£¬ÕâÀï¸ø³ö30µÄ×ø±êÆ«²î  
-                        // µã»÷ÊÂ¼ş±»´¥·¢  
+                            && Math.abs(downX - event.getX()) < 30) {// â˜…è€ƒè™‘åˆ°æ‰‹æŒ‰ä¸‹å’ŒæŠ¬èµ·æ—¶çš„åæ ‡ä¸å¯èƒ½å®Œå…¨é‡åˆï¼Œè¿™é‡Œç»™å‡º30çš„åæ ‡åå·®  
+                        // ç‚¹å‡»äº‹ä»¶è¢«è§¦å‘  
                         Toast.makeText(context,  
-                                "ÕâÀï¾Í²»µ¯³ö¶ÔÓ¦Ò³ÃæÁË£¬Äú´ò¿ªµÄÊÇµÚ" + position + "ÕÅÍ¼Æ¬", 0)  
+                                "è¿™é‡Œå°±ä¸å¼¹å‡ºå¯¹åº”é¡µé¢äº†ï¼Œæ‚¨æ‰“å¼€çš„æ˜¯ç¬¬" + position + "å¼ å›¾ç‰‡", Toast.LENGTH_SHORT)
                                 .show();  
                     }  
                     startRoll();  
                     break;  
                 case MotionEvent.ACTION_CANCEL:  
-                    // ¡ïĞ´Õâ¸öµÄÄ¿µÄÎªÁËÈÃÓÃ»§ÔÚÊÖÖ¸»¬¶¯ÍêÍ¼Æ¬ºó£¬ÄÜ¹»ÈÃÂÖ²¥Í¼¼ÌĞø×Ô¶¯¹ö¶¯  
+                    // â˜…å†™è¿™ä¸ªçš„ç›®çš„ä¸ºäº†è®©ç”¨æˆ·åœ¨æ‰‹æŒ‡æ»‘åŠ¨å®Œå›¾ç‰‡åï¼Œèƒ½å¤Ÿè®©è½®æ’­å›¾ç»§ç»­è‡ªåŠ¨æ»šåŠ¨  
                     startRoll();  
                     break;  
                 }  
@@ -157,20 +157,20 @@ public class LoginActivity extends Activity {
     @Override  
     protected void onPause() {  
         super.onPause();  
-        // ÒÆ³ıËùÓĞµÄÈÎÎñ£¬¼´£ºviewÊ§È¥½¹µãÊ±£¬Í£Ö¹ÂÖ²¥Í¼µÄ¹ö¶¯  
+        // ç§»é™¤æ‰€æœ‰çš„ä»»åŠ¡ï¼Œå³ï¼šviewå¤±å»ç„¦ç‚¹æ—¶ï¼Œåœæ­¢è½®æ’­å›¾çš„æ»šåŠ¨  
         handler.removeCallbacksAndMessages(null);  
     }  
   
     /** 
-     * ´¦ÀíĞ¡µãµã£¬Ê¹µÃĞ¡µãµãËæ×ÅÂÖ²¥Í¼µÄÎ»ÖÃ¶ø¸Ä±äÑÕÉ« 
+     * å¤„ç†å°ç‚¹ç‚¹ï¼Œä½¿å¾—å°ç‚¹ç‚¹éšç€è½®æ’­å›¾çš„ä½ç½®è€Œæ”¹å˜é¢œè‰² 
      */  
     private void initDot(LinearLayout dots_ll, int position) {  
-        // ±ØĞëÃ¿´Î½øÀ´Çå³ıÏßĞÔ²¼¾ÖÀïµÄËùÓĞĞ¡µãµã£¬²»È»£¬Ã¿´ÎÇĞ»»»ØÒ³Ãæ£¬¶¼ÔËĞĞinitDot·½·¨£¬»áÒ»Ö±ÀÛ¼ÓĞ¡µãµã£¬Ã¿´ÎÔö¼Ó8¸öµã  
+        // å¿…é¡»æ¯æ¬¡è¿›æ¥æ¸…é™¤çº¿æ€§å¸ƒå±€é‡Œçš„æ‰€æœ‰å°ç‚¹ç‚¹ï¼Œä¸ç„¶ï¼Œæ¯æ¬¡åˆ‡æ¢å›é¡µé¢ï¼Œéƒ½è¿è¡ŒinitDotæ–¹æ³•ï¼Œä¼šä¸€ç›´ç´¯åŠ å°ç‚¹ç‚¹ï¼Œæ¯æ¬¡å¢åŠ 8ä¸ªç‚¹  
         dots_ll.removeAllViews();  
         viewList.clear();  
      //   position=position%imageIdArray.length;  
-        // ±éÀúÂÖ²¥Í¼Æ¬µÄ¼¯ºÏ£¬Ã¿±éÀúÒ»¸ö£¬newÒ»¸öview£¬¸øÕâ¸öviewÉèÖÃ±³¾°Í¼Æ¬£¬  
-        // ¸ø°üº¬Ğ¡µãµãµÄ¸¸Ç×ÏÖĞÎ²¼¾ÖÉèÖÃ²ÎÊı£¬ÉèÖÃ¼ä¾à£¬ÏßĞÔ²¼¾ÖÌí¼ÓÕâĞ©µã£¬viewListÒ²Ìí¼ÓĞ¡µãµã  
+        // éå†è½®æ’­å›¾ç‰‡çš„é›†åˆï¼Œæ¯éå†ä¸€ä¸ªï¼Œnewä¸€ä¸ªviewï¼Œç»™è¿™ä¸ªviewè®¾ç½®èƒŒæ™¯å›¾ç‰‡ï¼Œ  
+        // ç»™åŒ…å«å°ç‚¹ç‚¹çš„çˆ¶äº²ç°å½¢å¸ƒå±€è®¾ç½®å‚æ•°ï¼Œè®¾ç½®é—´è·ï¼Œçº¿æ€§å¸ƒå±€æ·»åŠ è¿™äº›ç‚¹ï¼ŒviewListä¹Ÿæ·»åŠ å°ç‚¹ç‚¹  
 //        for (int i = 0; i < imageIdArray.length; i++) {  
 //            View view = new View(context);  
 //            if (i == position) {  
@@ -190,7 +190,7 @@ public class LoginActivity extends Activity {
     }  
   
     /** 
-     * ÊÊÅäÆ÷£¬ÒªÖØĞ´ÏÂÃæËÄ¸ö·½·¨ 
+     * é€‚é…å™¨ï¼Œè¦é‡å†™ä¸‹é¢å››ä¸ªæ–¹æ³• 
      */  
     class MyAdapter extends PagerAdapter {  
   
@@ -212,18 +212,18 @@ public class LoginActivity extends Activity {
 //            TextView title = (TextView) view.findViewById(R.id.top_news_title);  
 //            title.setText(titleArray[position%titleArray.length]);  
 //            LinearLayout dots_ll = (LinearLayout) view.findViewById(R.id.dots_ll);  
-//            // ´¦ÀíĞ¡µãµãµÄ²Ù×÷  
+//            // å¤„ç†å°ç‚¹ç‚¹çš„æ“ä½œ  
 //            initDot(dots_ll, position);  
-//            // onTouchViewPager·½·¨Ò»¶¨ÒªĞ´ÔÚinstantiateItemÄÚ²¿£¬±íÊ¾´¥ÃşµÄÊÇµ±Ç°Î»ÖÃµÄÒ³Ãæ  
+//            // onTouchViewPageræ–¹æ³•ä¸€å®šè¦å†™åœ¨instantiateItemå†…éƒ¨ï¼Œè¡¨ç¤ºè§¦æ‘¸çš„æ˜¯å½“å‰ä½ç½®çš„é¡µé¢  
 //            onTouchViewPager(view, position);  
-//            // ¡ï¡ï¡ïÕâ¾ä»°ºÜÖØÒª£¡£¡£¡±ğÍüÁËĞ´£¡£¡£¡  
+//            // â˜…â˜…â˜…è¿™å¥è¯å¾ˆé‡è¦ï¼ï¼ï¼åˆ«å¿˜äº†å†™ï¼ï¼ï¼  
 //            ((ViewPager) container).addView(view);  
 //            return view;  
 //        }  
 //  
 //        @Override  
 //        public void destroyItem(ViewGroup container, int position, Object object) {  
-//            // ¡ï¡ï¡ïÕâ¾ä»°ºÜÖØÒª£¡£¡£¡±ğÍüÁËĞ´£¡£¡£¡  
+//            // â˜…â˜…â˜…è¿™å¥è¯å¾ˆé‡è¦ï¼ï¼ï¼åˆ«å¿˜äº†å†™ï¼ï¼ï¼  
 //            ((ViewPager) container).removeView((View) object);  
 //        }  
 //    }  

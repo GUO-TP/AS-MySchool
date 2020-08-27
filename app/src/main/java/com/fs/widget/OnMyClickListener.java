@@ -3,16 +3,16 @@ package com.fs.widget;
 public interface OnMyClickListener {
 	
 	/**
-	 * µã»÷ÍÆ¼ö°´Å¥ÊÂ¼ş
+	 * ç‚¹å‡»æ¨èæŒ‰é’®äº‹ä»¶
 	 */
 	void OnShouYeClick();
 	/**
-	 * µã»÷ÅÅĞĞ°ñ°´Å¥ÊÂ¼ş
+	 * ç‚¹å‡»æ’è¡Œæ¦œæŒ‰é’®äº‹ä»¶
 	 */
 	void OnFenLeiClick();
 	
 	/**
-	 * µã»÷ËÑË÷°´Å¥ÊÂ¼ş
+	 * ç‚¹å‡»æœç´¢æŒ‰é’®äº‹ä»¶
 	 */
 //	void OnFaXianClick();
 //	

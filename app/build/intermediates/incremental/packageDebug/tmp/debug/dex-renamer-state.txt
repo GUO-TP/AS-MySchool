@@ -1,4 +1,4 @@
-#Wed Aug 26 10:51:25 CST 2020
+#Thu Aug 27 09:45:47 CST 2020
 base.0=E\:\\app\\MySchool\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

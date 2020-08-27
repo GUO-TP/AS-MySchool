@@ -110,20 +110,20 @@ public class MyAListAdapter2 extends BaseAdapter {
 //			@Override
 //			public boolean onTouch(View v, MotionEvent event) {
 //				switch (event.getAction()) {
-//				case MotionEvent.ACTION_DOWN:// °´ÏÂÈ¥Ê±£¬¼ÇÂ¼°´ÏÂµÄ×ø±êºÍÊ±¼ä£¬ÓÃÓÚÅĞ¶ÏÊÇ·ñÊÇµã»÷ÊÂ¼ş
-//					//handler.removeCallbacksAndMessages(null);// ÊÖÖ¸°´ÏÂÊ±£¬È¡ÏûËùÓĞÊÂ¼ş£¬¼´ÂÖ²¥Í¼²»ÔÚ¹ö¶¯ÁË
+//				case MotionEvent.ACTION_DOWN:// æŒ‰ä¸‹å»æ—¶ï¼Œè®°å½•æŒ‰ä¸‹çš„åæ ‡å’Œæ—¶é—´ï¼Œç”¨äºåˆ¤æ–­æ˜¯å¦æ˜¯ç‚¹å‡»äº‹ä»¶
+//					//handler.removeCallbacksAndMessages(null);// æ‰‹æŒ‡æŒ‰ä¸‹æ—¶ï¼Œå–æ¶ˆæ‰€æœ‰äº‹ä»¶ï¼Œå³è½®æ’­å›¾ä¸åœ¨æ»šåŠ¨äº†
 //					downX = (int) event.getX();
 //					downTime = System.currentTimeMillis();
 //					break;
-//				case MotionEvent.ACTION_UP:// Ì§ÆğÊÖÖ¸Ê±£¬ÅĞ¶ÏÂäÏÂÌ§ÆğµÄÊ±¼ä²îºÍ×ø±ê£¬·ûºÏÒÔÏÂÌõ¼şÎªµã»÷
-//					// Toast.makeText(context, "ÊÖÖ¸Ì§ÆğÁË", 0).show();
+//				case MotionEvent.ACTION_UP:// æŠ¬èµ·æ‰‹æŒ‡æ—¶ï¼Œåˆ¤æ–­è½ä¸‹æŠ¬èµ·çš„æ—¶é—´å·®å’Œåæ ‡ï¼Œç¬¦åˆä»¥ä¸‹æ¡ä»¶ä¸ºç‚¹å‡»
+//					// Toast.makeText(context, "æ‰‹æŒ‡æŠ¬èµ·äº†", 0).show();
 //					if (System.currentTimeMillis() - downTime < 1000
-//							&& Math.abs(downX - event.getX()) < 30) {// ¡ï¿¼ÂÇµ½ÊÖ°´ÏÂºÍÌ§ÆğÊ±µÄ×ø±ê²»¿ÉÄÜÍêÈ«ÖØºÏ£¬ÕâÀï¸ø³ö30µÄ×ø±êÆ«²î
-//						// µã»÷ÊÂ¼ş±»´¥·¢
+//							&& Math.abs(downX - event.getX()) < 30) {// â˜…è€ƒè™‘åˆ°æ‰‹æŒ‰ä¸‹å’ŒæŠ¬èµ·æ—¶çš„åæ ‡ä¸å¯èƒ½å®Œå…¨é‡åˆï¼Œè¿™é‡Œç»™å‡º30çš„åæ ‡åå·®
+//						// ç‚¹å‡»äº‹ä»¶è¢«è§¦å‘
 //						Toast.makeText(
 //								context,
-//								"ÕâÀï¾Í²»µ¯³ö¶ÔÓ¦Ò³ÃæÁË£¬Äúµã»÷µÄÊÇµÚ" + index
-//										+ "¸ölistview", 0).show();
+//								"è¿™é‡Œå°±ä¸å¼¹å‡ºå¯¹åº”é¡µé¢äº†ï¼Œæ‚¨ç‚¹å‡»çš„æ˜¯ç¬¬" + index
+//										+ "ä¸ªlistview", 0).show();
 ////						 Intent intent = new Intent();
 ////						 intent.setClass(context, ShowActivity.class);
 ////						 intent.putExtra("id", index);
@@ -133,7 +133,7 @@ public class MyAListAdapter2 extends BaseAdapter {
 //					// startRoll();
 //					break;
 //				case MotionEvent.ACTION_CANCEL:
-//					// ¡ïĞ´Õâ¸öµÄÄ¿µÄÎªÁËÈÃÓÃ»§ÔÚÊÖÖ¸»¬¶¯ÍêÍ¼Æ¬ºó£¬ÄÜ¹»ÈÃÂÖ²¥Í¼¼ÌĞø×Ô¶¯¹ö¶¯
+//					// â˜…å†™è¿™ä¸ªçš„ç›®çš„ä¸ºäº†è®©ç”¨æˆ·åœ¨æ‰‹æŒ‡æ»‘åŠ¨å®Œå›¾ç‰‡åï¼Œèƒ½å¤Ÿè®©è½®æ’­å›¾ç»§ç»­è‡ªåŠ¨æ»šåŠ¨
 //					// startRoll();
 //					break;
 //				}

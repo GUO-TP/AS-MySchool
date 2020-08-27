@@ -1,45 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="45dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="horizontal" >
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/tab_view_btn_zhuye"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
-        android:layout_weight="1" >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
         <TextView
             android:id="@+id/tab_view_btn_zhuye_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-             android:background="@drawable/home_selected"
-            
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/home_selected"
+            android:layout_weight="1"
+
+
             />
 
        
-    </RelativeLayout>
+    </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/tab_view_btn_fenlei"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
-        android:layout_weight="1" >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
         <TextView
             android:id="@+id/tab_view_btn_fenlei_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-           
-           android:background="@drawable/type_nomal" />
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/type_nomal"
+            android:layout_weight="1"/>
 
         
-    </RelativeLayout>
+    </LinearLayout>
 
    <!--   <RelativeLayout
         android:id="@+id/tab_view_btn_faxian"
@@ -75,23 +73,21 @@
        
     </RelativeLayout>-->
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/tab_view_btn_wode"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
-        android:layout_weight="1" >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_weight="1">
 
         <TextView
             android:id="@+id/tab_view_btn_wode_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_centerInParent="true"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
             android:background="@drawable/mine_nomal"
-            
+            android:layout_weight="1"
             />
 
        
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

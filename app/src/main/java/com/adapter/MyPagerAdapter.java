@@ -55,40 +55,40 @@ public class MyPagerAdapter extends PagerAdapter {
 		return sliders.size();
 	}
 
-	// 1,°Ñµ±Ç°ÏÔÊ¾µÄÊÓÍ¼¸øViewPager
+	// 1,æŠŠå½“å‰æ˜¾ç¤ºçš„è§†å›¾ç»™ViewPager
 	@Override
 	public Object instantiateItem(View container, final int position) {
-		// 1,´Ó»¬¶¯µÄĞ§¹û·µ»ØµÄpositionÖµÕÒµ½¶ÔÓ¦µÄÊı¾İ
+		// 1,ä»æ»‘åŠ¨çš„æ•ˆæœè¿”å›çš„positionå€¼æ‰¾åˆ°å¯¹åº”çš„æ•°æ®
 		Slider slider = sliders.get(position);
 		//News slider = sliders.get(position);
 		// Advertisement slider=sliders.get(position);
-		// 2,´Ó¶ÔÓ¦µÄÊı¾İ»ñµÃÍ¼Æ¬µØÖ·
+		// 2,ä»å¯¹åº”çš„æ•°æ®è·å¾—å›¾ç‰‡åœ°å€
 		final String url = slider.getPicUrl();
 		//final String url = slider.getPhoto();
-		// 3,¸ù¾İurlµØÖ·È¥»ñµÃÏÔÊ¾µÄÊÓÍ¼
+		// 3,æ ¹æ®urlåœ°å€å»è·å¾—æ˜¾ç¤ºçš„è§†å›¾
 		if (viewMap.get(url) == null) {
-			// 1,´´½¨ÊÓÍ¼
+			// 1,åˆ›å»ºè§†å›¾
 			final ImageView imagerView = new ImageView(context);
-			// 2,ÉèÖÃÍ¼Æ¬ÔÚ×é¼şÀïÃæ´æ·ÅµÄĞÎÊ½£¬ÕâÀïÊÇ°Ñ·Å½øÈ¥µÄÍ¼Æ¬·Å´óµÄ×é¼şÒ»Ñù´ó
+			// 2,è®¾ç½®å›¾ç‰‡åœ¨ç»„ä»¶é‡Œé¢å­˜æ”¾çš„å½¢å¼ï¼Œè¿™é‡Œæ˜¯æŠŠæ”¾è¿›å»çš„å›¾ç‰‡æ”¾å¤§çš„ç»„ä»¶ä¸€æ ·å¤§
 			imagerView.setScaleType(ImageView.ScaleType.FIT_XY);
 			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
 					Constant.width, Constant.height / 4);
 			imagerView.setLayoutParams(params);
-			// 2,°Ñµ±Ç°µÄÊÓÍ¼Ìí¼Óµ½ÈİÆ÷
+			// 2,æŠŠå½“å‰çš„è§†å›¾æ·»åŠ åˆ°å®¹å™¨
 			viewMap.put(url, imagerView);
-			// 3,ÏÂÔØÍ¼Æ¬
+			// 3,ä¸‹è½½å›¾ç‰‡
 			imageLoader.loadImag(new OnBitmapListener() {
 				@Override
 				public void getBitmap(Bitmap bitmap) {
-					// 4,ÏÂÔØ³É¹¦
+					// 4,ä¸‹è½½æˆåŠŸ
 					imagerView.setImageBitmap(bitmap);
-					// µã»÷¼àÌı²âÊÔ
+					// ç‚¹å‡»ç›‘å¬æµ‹è¯•
 					View view = viewMap.get(url);
 					onTouchViewPager(view, position);
 				}
 
 	private void onTouchViewPager(View view, final int position) {
-					// ¸øÍ¼Æ¬×¢²á´¥ÃşÊÂ¼ş¼àÌıÆ÷
+					// ç»™å›¾ç‰‡æ³¨å†Œè§¦æ‘¸äº‹ä»¶ç›‘å¬å™¨
 //					view.setOnTouchListener(new OnTouchListener() {
 //
 //						private long downTime;
@@ -97,21 +97,21 @@ public class MyPagerAdapter extends PagerAdapter {
 //						@Override
 //						public boolean onTouch(View v, MotionEvent event) {
 //							switch (event.getAction()) {
-//							case MotionEvent.ACTION_DOWN:// °´ÏÂÈ¥Ê±£¬¼ÇÂ¼°´ÏÂµÄ×ø±êºÍÊ±¼ä£¬ÓÃÓÚÅĞ¶ÏÊÇ·ñÊÇµã»÷ÊÂ¼ş
-//								//handler.removeCallbacksAndMessages(null);// ÊÖÖ¸°´ÏÂÊ±£¬È¡ÏûËùÓĞÊÂ¼ş£¬¼´ÂÖ²¥Í¼²»ÔÚ¹ö¶¯ÁË
+//							case MotionEvent.ACTION_DOWN:// æŒ‰ä¸‹å»æ—¶ï¼Œè®°å½•æŒ‰ä¸‹çš„åæ ‡å’Œæ—¶é—´ï¼Œç”¨äºåˆ¤æ–­æ˜¯å¦æ˜¯ç‚¹å‡»äº‹ä»¶
+//								//handler.removeCallbacksAndMessages(null);// æ‰‹æŒ‡æŒ‰ä¸‹æ—¶ï¼Œå–æ¶ˆæ‰€æœ‰äº‹ä»¶ï¼Œå³è½®æ’­å›¾ä¸åœ¨æ»šåŠ¨äº†
 //								downX = (int) event.getX();
 //								downTime = System.currentTimeMillis();
 //								
 //								break;
-//							case MotionEvent.ACTION_UP:// Ì§ÆğÊÖÖ¸Ê±£¬ÅĞ¶ÏÂäÏÂÌ§ÆğµÄÊ±¼ä²îºÍ×ø±ê£¬·ûºÏÒÔÏÂÌõ¼şÎªµã»÷
-//								// Toast.makeText(context, "ÊÖÖ¸Ì§ÆğÁË", 0).show();
+//							case MotionEvent.ACTION_UP:// æŠ¬èµ·æ‰‹æŒ‡æ—¶ï¼Œåˆ¤æ–­è½ä¸‹æŠ¬èµ·çš„æ—¶é—´å·®å’Œåæ ‡ï¼Œç¬¦åˆä»¥ä¸‹æ¡ä»¶ä¸ºç‚¹å‡»
+//								// Toast.makeText(context, "æ‰‹æŒ‡æŠ¬èµ·äº†", 0).show();
 //								if (System.currentTimeMillis() - downTime < 1000
-//										&& Math.abs(downX - event.getX()) < 30) {// ¡ï¿¼ÂÇµ½ÊÖ°´ÏÂºÍÌ§ÆğÊ±µÄ×ø±ê²»¿ÉÄÜÍêÈ«ÖØºÏ£¬ÕâÀï¸ø³ö30µÄ×ø±êÆ«²î
-//									// µã»÷ÊÂ¼ş±»´¥·¢
+//										&& Math.abs(downX - event.getX()) < 30) {// â˜…è€ƒè™‘åˆ°æ‰‹æŒ‰ä¸‹å’ŒæŠ¬èµ·æ—¶çš„åæ ‡ä¸å¯èƒ½å®Œå…¨é‡åˆï¼Œè¿™é‡Œç»™å‡º30çš„åæ ‡åå·®
+//									// ç‚¹å‡»äº‹ä»¶è¢«è§¦å‘
 //									Toast.makeText(
 //											context,
-//											"ÕâÀï¾Í²»µ¯³ö¶ÔÓ¦Ò³ÃæÁË£¬Äú´ò¿ªµÄÊÇµÚ" + position
-//													+ "ÕÅÍ¼Æ¬", 0).show();
+//											"è¿™é‡Œå°±ä¸å¼¹å‡ºå¯¹åº”é¡µé¢äº†ï¼Œæ‚¨æ‰“å¼€çš„æ˜¯ç¬¬" + position
+//													+ "å¼ å›¾ç‰‡", 0).show();
 ////									 Intent intent = new Intent(MainActivity.class, ShowActivity.class);
 ////									 intent.putExtra("id", position);
 //								
@@ -127,7 +127,7 @@ public class MyPagerAdapter extends PagerAdapter {
 //							//	startActivity(intent); 
 //						
 //			                
-//								// ¡ïĞ´Õâ¸öµÄÄ¿µÄÎªÁËÈÃÓÃ»§ÔÚÊÖÖ¸»¬¶¯ÍêÍ¼Æ¬ºó£¬ÄÜ¹»ÈÃÂÖ²¥Í¼¼ÌĞø×Ô¶¯¹ö¶¯
+//								// â˜…å†™è¿™ä¸ªçš„ç›®çš„ä¸ºäº†è®©ç”¨æˆ·åœ¨æ‰‹æŒ‡æ»‘åŠ¨å®Œå›¾ç‰‡åï¼Œèƒ½å¤Ÿè®©è½®æ’­å›¾ç»§ç»­è‡ªåŠ¨æ»šåŠ¨
 //								// startRoll();
 //								break;
 //							}
@@ -169,11 +169,11 @@ public class MyPagerAdapter extends PagerAdapter {
 	}
 
 //	private Handler handler = new Handler() {
-//		// 5.½ÓÊÕ²¢´¦Àírun·½·¨·¢À´µÄÏûÏ¢
+//		// 5.æ¥æ”¶å¹¶å¤„ç†runæ–¹æ³•å‘æ¥çš„æ¶ˆæ¯
 //		public void handleMessage(android.os.Message msg) {
-//			// 6.viewpagerÉèÖÃĞÂµÄµ±Ç°Ò³
+//			// 6.viewpagerè®¾ç½®æ–°çš„å½“å‰é¡µ
 //			// viewpager.setCurrentItem(currentPosition);
-//			// 7.¼ÌĞøÖ´ĞĞstartRoll·½·¨£¬³ÉÎªÒ»¸öÑ­»·
+//			// 7.ç»§ç»­æ‰§è¡ŒstartRollæ–¹æ³•ï¼Œæˆä¸ºä¸€ä¸ªå¾ªç¯
 //			// startRoll();
 //		}
 //	};

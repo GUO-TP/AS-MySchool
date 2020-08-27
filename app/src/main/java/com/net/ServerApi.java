@@ -15,18 +15,18 @@ public class ServerApi {
 	RequestQueue mQueue;
 
 	public ServerApi(Context context) {
-		// 1,»ñµÃ RequestQueue¶ÔÏó
+		// 1,è·å¾— RequestQueueå¯¹è±¡
 		mQueue = Volley.newRequestQueue(context);
 	}
 
 	public void getData(String url,final OnMyResponse onMyResponse ,final Class<?> cl) {
-		// 1,»ñµÃStringRequest¶ÔÏó  (1)ÇëÇóµÄµØÖ·  £¨2£©³É¹¦»ñµÃÊı¾İ·µ»Ø £¨3£©Ê§°Ü»ñµÃÊı¾İ·µ»Ø
+		// 1,è·å¾—StringRequestå¯¹è±¡  (1)è¯·æ±‚çš„åœ°å€  ï¼ˆ2ï¼‰æˆåŠŸè·å¾—æ•°æ®è¿”å› ï¼ˆ3ï¼‰å¤±è´¥è·å¾—æ•°æ®è¿”å›
 	StringRequest m_StringRequest = new StringRequest(url,new Listener<String>() {
 							@Override
 							public void onResponse(String infor) {
-								// 1,´´½¨Gson¶ÔÏó
+								// 1,åˆ›å»ºGsonå¯¹è±¡
 								Gson gson = new Gson();
-								// 2,µ÷ÓÃ·½·¨£¬½âÎöjson¸ñÊ½Êı¾İ£¬×ªÎª¶ÔÏó
+								// 2,è°ƒç”¨æ–¹æ³•ï¼Œè§£æjsonæ ¼å¼æ•°æ®ï¼Œè½¬ä¸ºå¯¹è±¡
 												
 								Object ob = gson.fromJson(infor, cl);
 								onMyResponse.onResponse(ob);

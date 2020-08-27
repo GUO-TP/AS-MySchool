@@ -43,7 +43,7 @@ List<Goods> list;
 	public  MyGridAdapter(List<Goods> list,Context context){
 		//this.sliders=sliders;
 		//length=sliders.size();
-		//Ëü´ú±íMainActivity
+		//å®ƒä»£è¡¨MainActivity
 		this.list=list;
 		this.context=context;
 		length=list.size();
@@ -70,62 +70,62 @@ List<Goods> list;
 	@Override
 	public View getView(int index, View view, ViewGroup arg2) {
 		
-		// ÓÃÀ´±£´æÏÔÊ¾×é¼şµÄÒıÓÃ
+		// ç”¨æ¥ä¿å­˜æ˜¾ç¤ºç»„ä»¶çš„å¼•ç”¨
 		ViewHolder viewHolder=null;
 		
-		//´ÓÄÚ´æµÄ½Ç¶È¿¼ÂÇ
+		//ä»å†…å­˜çš„è§’åº¦è€ƒè™‘
 		if(view==null){
-			//°ÑÒ»¸ö²¼¾Ö×ªÎªView£¬
+			//æŠŠä¸€ä¸ªå¸ƒå±€è½¬ä¸ºViewï¼Œ
 			view= ((Activity)context).getLayoutInflater().inflate(R.layout.activity_gridmain, null);	
 			//  imageView=(ImageView)view.findViewById(R.id.grid_imageView);
 			  // name=(TextView)view.findViewById(R.id.grid_name);
 			viewHolder = new ViewHolder();			
-			//°ÑviewHolder±£´æµ½view¶ÔÏóÀïÃæ
+			//æŠŠviewHolderä¿å­˜åˆ°viewå¯¹è±¡é‡Œé¢
 			view.setTag(viewHolder);
 			
-			//**************  ´´½¨ViewµÄÊ±ºò£¬Ö»ĞèÒªÕÒÒ»´Î×é¼şµÄÒıÓÃ£¬°ÑÕâ¸öÒıÓÃ±£´æµ½viewHolder¶ÔÏóÀïÃæ
+			//**************  åˆ›å»ºViewçš„æ—¶å€™ï¼Œåªéœ€è¦æ‰¾ä¸€æ¬¡ç»„ä»¶çš„å¼•ç”¨ï¼ŒæŠŠè¿™ä¸ªå¼•ç”¨ä¿å­˜åˆ°viewHolderå¯¹è±¡é‡Œé¢
 			
-			//2,´ÓviewÀïÃæ»ñµÃImageView×é¼ş
+			//2,ä»viewé‡Œé¢è·å¾—ImageViewç»„ä»¶
 			viewHolder.imageView = (ImageView)view.findViewById(R.id.grid_imageView);
-			//3,´ÓviewÀïÃæ»ñµÃTextView×é¼ş
+			//3,ä»viewé‡Œé¢è·å¾—TextViewç»„ä»¶
 			viewHolder.name =(TextView)view.findViewById(R.id.grid_name);						
 		}
 			else{
 			viewHolder=(ViewHolder)view.getTag();
 		}
 	
-		//5£¬×¼±¸Êı¾İ
+		//5ï¼Œå‡†å¤‡æ•°æ®
 		Goods singer =list.get(index);
 //		Slider slider = sliders.get(index);
 //		String url = slider.getPicUrl();
 //		String urlo = slider.getId();
 //		
-//		//6£¬´Ósinger¶ÔÏó»ñµÃÊı¾İ
+//		//6ï¼Œä»singerå¯¹è±¡è·å¾—æ•°æ®
 		int ImageId= singer.getImageId();
 		String nameInfor =singer.getName();
 		
-		//7£¬Ïò×é¼şÌí¼ÓÊı¾İ
+		//7ï¼Œå‘ç»„ä»¶æ·»åŠ æ•°æ®
 		viewHolder.imageView.setImageResource(ImageId);
 		viewHolder.name.setText(nameInfor);
 //		if (viewMap.get(url) == null) {
 //
-//			// 1,´´½¨ÊÓÍ¼
+//			// 1,åˆ›å»ºè§†å›¾
 //			final ImageView imagerView = new ImageView(context);
-//			// 2,ÉèÖÃÍ¼Æ¬ÔÚ×é¼şÀïÃæ´æ·ÅµÄĞÎÊ½£¬ÕâÀïÊÇ°Ñ·Å½øÈ¥µÄÍ¼Æ¬·Å´óµÄ×é¼şÒ»Ñù´ó
+//			// 2,è®¾ç½®å›¾ç‰‡åœ¨ç»„ä»¶é‡Œé¢å­˜æ”¾çš„å½¢å¼ï¼Œè¿™é‡Œæ˜¯æŠŠæ”¾è¿›å»çš„å›¾ç‰‡æ”¾å¤§çš„ç»„ä»¶ä¸€æ ·å¤§
 //			imagerView.setScaleType(ImageView.ScaleType.FIT_XY);
 //			
 //			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
 //					Constant.width, Constant.height / 4);
 //			imagerView.setLayoutParams(params);
 
-			// 2,°Ñµ±Ç°µÄÊÓÍ¼Ìí¼Óµ½ÈİÆ÷
+			// 2,æŠŠå½“å‰çš„è§†å›¾æ·»åŠ åˆ°å®¹å™¨
 //			viewMap.put(url, imagerView);
-//			// 3,ÏÂÔØÍ¼Æ¬
+//			// 3,ä¸‹è½½å›¾ç‰‡
 //			imageLoader.loadImag(new OnBitmapListener() {
 //
 //				@Override
 //				public void getBitmap(Bitmap bitmap) {
-//					// 4,ÏÂÔØ³É¹¦
+//					// 4,ä¸‹è½½æˆåŠŸ
 //					imagerView.setImageBitmap(bitmap);
 //					
 //				}
@@ -140,7 +140,7 @@ List<Goods> list;
 		return view;
 	}
 	
-	//  °ÑViewÀïÃæ»ñµÃ×é¼şµÄÒıÓÃ±£´æµ½ÕâÀï
+	//  æŠŠViewé‡Œé¢è·å¾—ç»„ä»¶çš„å¼•ç”¨ä¿å­˜åˆ°è¿™é‡Œ
 	class ViewHolder{
 		ImageView  imageView;
 		TextView name;

@@ -20,7 +20,7 @@ public class ShowActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.showweb);// ¼ÓÔØ.xmlÎÄ¼þ
+		setContentView(R.layout.showweb);// åŠ è½½.xmlæ–‡ä»¶
 		webViwe = (WebView) findViewById(R.id.show_webview);
 		t = (TextView) findViewById(R.id.tt1);
 
@@ -37,11 +37,11 @@ public class ShowActivity extends Activity {
 		// TODO Auto-generated method stub
 
 		Bundle bundle = this.getIntent().getExtras();
-		// ½ÓÊÕnameÖµ
+		// æŽ¥æ”¶nameå€¼
 		String data = bundle.getString("name");
 		String T=data.trim();
 		// int i=Integer.parseInt(data);
-		Toast.makeText(ShowActivity.this, "55" + data, 0).show();
+		Toast.makeText(ShowActivity.this, "55" + data, Toast.LENGTH_SHORT).show();
 
 		 int i=Integer.parseInt(data);
 //		 switch (i) {

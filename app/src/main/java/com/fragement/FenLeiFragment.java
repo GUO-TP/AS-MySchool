@@ -30,7 +30,7 @@ public class FenLeiFragment extends Fragment implements OnClickListener{
 	     Button button_kuaidi;
 	     Button button_goods;
 	     WebView webView;
-		String infor[]={"Ğ¡¸Õ","Ğ¡ÁÖ","Ğ¡¶÷¶÷","Ğ¡ÒÔ"};
+		String infor[]={"å°åˆš","å°æ—","å°æ©æ©","å°ä»¥"};
 		MyBListAdapter myBListAdapter;
 		List<Type> list = new ArrayList<Type>();
 	@Override
@@ -41,7 +41,7 @@ public class FenLeiFragment extends Fragment implements OnClickListener{
 		setHasOptionsMenu(true);
 		return v;
 	}
-	//ÉèÖÃ²Ëµ¥²¢¼àÌı
+	//è®¾ç½®èœå•å¹¶ç›‘å¬
 	private void setMenue(View v) {
 		button_waimai = (Button) v.findViewById(R.id.fenlei_left_btwaimai);
 		button_kuaidi = (Button) v.findViewById(R.id.fenlei_left_btkuaidi);
@@ -65,15 +65,15 @@ case R.id.fenlei_left_btwaimai:
 			
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
-				switch (item.getItemId()) {//item.getItemId()»ñÈ¡²Ëµ¥Ïîid
+				switch (item.getItemId()) {//item.getItemId()è·å–èœå•é¡¹id
 				case R.id.waimai_getinf:
-					//Toast.makeText(context, "½ÓÊÜµã»÷³É¹¦", Toast.LENGTH_SHORT).show();
+					//Toast.makeText(context, "æ¥å—ç‚¹å‡»æˆåŠŸ", Toast.LENGTH_SHORT).show();
 					webView.loadUrl("http://192.168.1.107:8080/a_stusys/WaiMai/showAllWaiMai.do");
-					//Toast.makeText(getActivity(),"ÕâÀïÔİÊ±µ¯³ö¶ÔÓ¦Ò³ÃæÁË£¬Äúµã»÷µÄÊÇwaimai½ÓÊÜ" , 0).show();
+					//Toast.makeText(getActivity(),"è¿™é‡Œæš‚æ—¶å¼¹å‡ºå¯¹åº”é¡µé¢äº†ï¼Œæ‚¨ç‚¹å‡»çš„æ˜¯waimaiæ¥å—" , 0).show();
 					break;
 				case R.id.waimai_setinf:
-					//Toast.makeText(context, "·¢²¼µã»÷³É¹¦", Toast.LENGTH_SHORT).show();
-					//Toast.makeText(getActivity(),"ÕâÀïÔİÊ±²»µ¯³ö¶ÔÓ¦Ò³ÃæÁË£¬Äúµã»÷µÄÊÇwaimai·¢²¼" , 0).show();
+					//Toast.makeText(context, "å‘å¸ƒç‚¹å‡»æˆåŠŸ", Toast.LENGTH_SHORT).show();
+					//Toast.makeText(getActivity(),"è¿™é‡Œæš‚æ—¶ä¸å¼¹å‡ºå¯¹åº”é¡µé¢äº†ï¼Œæ‚¨ç‚¹å‡»çš„æ˜¯waimaiå‘å¸ƒ" , 0).show();
 					webView.loadUrl("http://192.168.1.107:8080/a_stusys/waimaiAdd.jsp");
 					break;
 			
@@ -94,15 +94,15 @@ case R.id.fenlei_left_btkuaidi:
 					
 					@Override
 					public boolean onMenuItemClick(MenuItem item) {
-						switch (item.getItemId()) {//item.getItemId()»ñÈ¡²Ëµ¥Ïîid
+						switch (item.getItemId()) {//item.getItemId()è·å–èœå•é¡¹id
 						case R.id.kuaidi_getinf:
-							//Toast.makeText(context, "½ÓÊÜµã»÷³É¹¦", Toast.LENGTH_SHORT).show();
-							//Toast.makeText(getActivity(),"ÕâÀïÔİÊ±µ¯³ö¶ÔÓ¦Ò³ÃæÁË£¬Äúµã»÷µÄÊÇkuaidi½ÓÊÜ" , 0).show();
+							//Toast.makeText(context, "æ¥å—ç‚¹å‡»æˆåŠŸ", Toast.LENGTH_SHORT).show();
+							//Toast.makeText(getActivity(),"è¿™é‡Œæš‚æ—¶å¼¹å‡ºå¯¹åº”é¡µé¢äº†ï¼Œæ‚¨ç‚¹å‡»çš„æ˜¯kuaidiæ¥å—" , 0).show();
 							webView.loadUrl("http://192.168.1.107:8080/a_stusys/KuaiDi/showAllKuaiDi.do");
 							break;
 						case R.id.kuaidi_setinf:
-							//Toast.makeText(context, "·¢²¼µã»÷³É¹¦", Toast.LENGTH_SHORT).show();
-							//Toast.makeText(getActivity(),"ÕâÀïÔİÊ±²»µ¯³ö¶ÔÓ¦Ò³ÃæÁË£¬Äúµã»÷µÄÊÇkuaidi·¢²¼" , 0).show();
+							//Toast.makeText(context, "å‘å¸ƒç‚¹å‡»æˆåŠŸ", Toast.LENGTH_SHORT).show();
+							//Toast.makeText(getActivity(),"è¿™é‡Œæš‚æ—¶ä¸å¼¹å‡ºå¯¹åº”é¡µé¢äº†ï¼Œæ‚¨ç‚¹å‡»çš„æ˜¯kuaidiå‘å¸ƒ" , 0).show();
 							webView.loadUrl("http://192.168.1.107:8080/a_stusys/kuaidiAdd.jsp");
 							break;
 					
@@ -122,15 +122,15 @@ case R.id.fenlei_left_btgoods:
 		
 		@Override
 		public boolean onMenuItemClick(MenuItem item) {
-			switch (item.getItemId()) {//item.getItemId()»ñÈ¡²Ëµ¥Ïîid
+			switch (item.getItemId()) {//item.getItemId()è·å–èœå•é¡¹id
 			case R.id.goods_getinf:
-				//Toast.makeText(context, "½ÓÊÜµã»÷³É¹¦", Toast.LENGTH_SHORT).show();
-				//Toast.makeText(getActivity(),"ÕâÀïÔİÊ±µ¯³ö¶ÔÓ¦Ò³ÃæÁË£¬Äúµã»÷µÄÊÇgoods½ÓÊÜ" , 0).show();
+				//Toast.makeText(context, "æ¥å—ç‚¹å‡»æˆåŠŸ", Toast.LENGTH_SHORT).show();
+				//Toast.makeText(getActivity(),"è¿™é‡Œæš‚æ—¶å¼¹å‡ºå¯¹åº”é¡µé¢äº†ï¼Œæ‚¨ç‚¹å‡»çš„æ˜¯goodsæ¥å—" , 0).show();
 				webView.loadUrl("http://192.168.1.107:8080/a_stusys/Goods/showAllGoods.do");
 				break;
 			case R.id.goods_setinf:
-				//Toast.makeText(context, "·¢²¼µã»÷³É¹¦", Toast.LENGTH_SHORT).show();
-				//Toast.makeText(getActivity(),"ÕâÀïÔİÊ±²»µ¯³ö¶ÔÓ¦Ò³ÃæÁË£¬Äúµã»÷µÄÊÇgoods·¢²¼" , 0).show();
+				//Toast.makeText(context, "å‘å¸ƒç‚¹å‡»æˆåŠŸ", Toast.LENGTH_SHORT).show();
+				//Toast.makeText(getActivity(),"è¿™é‡Œæš‚æ—¶ä¸å¼¹å‡ºå¯¹åº”é¡µé¢äº†ï¼Œæ‚¨ç‚¹å‡»çš„æ˜¯goodså‘å¸ƒ" , 0).show();
 				webView.loadUrl("http://192.168.1.107:8080/a_stusys/goodsAdd.jsp");
 				break;
 		
